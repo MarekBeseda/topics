@@ -68,24 +68,24 @@ module.exports = function (grunt) {
         ]
       }
     },
-	less: {
-	  server: {
-		options: {
-		  paths: ['app/styles']
+		less: {
+			server: {
+			options: {
+				paths: ['app/styles']
+			},
+			files: {
+				'.tmp/styles/main.css': 'app/styles/main.less'
+			}
+			},
+			dist: {
+			options: {
+				paths: ['app/styles'],
+			},
+			files: {
+				'.tmp/styles/main.css': 'app/styles/main.less'
+			}
+			}
 		},
-		files: {
-		  '.tmp/styles/main.css': 'app/styles/main.less'
-		}
-	  },
-	  dist: {
-		options: {
-		  paths: ['app/styles'],
-		},
-		files: {
-		  '.tmp/styles/main.css': 'app/styles/main.less'
-		}
-	  }
-	},
     // The actual grunt server settings
     connect: {
       options: {
@@ -237,7 +237,7 @@ module.exports = function (grunt) {
                 js: '\'{{filePath}}\','
               }
             }
-          }
+				}
       }
     }, 
 
@@ -409,6 +409,11 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           cwd: 'bower_components/bootstrap/dist',
+          src: 'fonts/*',
+          dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: 'bower_components/font-awesome/',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
         }]
