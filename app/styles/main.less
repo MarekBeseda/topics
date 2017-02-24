@@ -5,6 +5,11 @@
   padding: 0.2em 0;
 }
 
+@indigo500: #3F51B5;
+@indigo400: #5C6BC0;
+@indigo200: #9FA8DA;
+@indigo100: #C5CAE9;
+
 body {
   padding: 0;
 }
@@ -19,14 +24,17 @@ body {
 
 /* Custom page header */
 .header {
+  padding: 0;
 	.header h3 {
 	  margin-top: 0;
 	  margin-bottom: 0;
 	  line-height: 40px;
 	  padding-bottom: 19px;
+
 	}
 	.jumbotron{
-		margin-top: 50px;
+    height: 400px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.16), 0 5px 20px 0 rgba(0,0,0,.12);
 	}
 }
 
@@ -50,32 +58,90 @@ body {
 	  padding: 14px 24px;
   }
 }
-
-
-.tile {
-	padding: 10px;
-	.well{
-		border-radius: 0;
-		height: 300px;
-	}
+.card {
+  border: 0px;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.12);
+  transition: box-shadow 0.5s ease;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 1170px;
+.flat-btn{
+  color: @indigo500;
+  font-weight: 500;
+  height: 36px;
+  padding: 5px 10px;
+  transition: background-color 0.2s ease;
+  &:hover{
+    background-color: fade(@indigo100, 20%);
+    text-decoration: none;
+    color:@indigo400; 
   }
+  &:focus{
+    background-color: fade(@indigo200, 40%);
+    text-decoration: none;
+    color:@indigo400; 
+  }
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+.article-card{
+  padding: 10px;
+  .card{
+    &:hover{
+      box-shadow: 0 8px 10px 0 rgba(0,0,0,.16), 0 8px 10px 0 rgba(0,0,0,.12);
+    } 
   }
-  
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+}
+
+.article-header{
+  position: relative;
+  top: -100px;
+  min-height: 150px;
+  margin: 0px auto -80px auto;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  h1{
+    font-size: 36px;
+  }
+  h2{
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    max-width: 100%;
+  }
+  .article-header{
+    width: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    max-width: 100%;
+  }
+  .article-header{
+    width: 780px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    max-width: 100%;
+  }
+  .article-header{
+    width: 1020px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 960px;
+    max-width: 100%;
+  }
+  .article-header{
+    width: 1020px;
   }
 }

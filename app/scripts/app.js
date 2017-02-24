@@ -15,21 +15,47 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router',
+    'ui.router.title'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .config(function ($stateProvider, $locationProvider) {
+    $stateProvider.state('main', {
+      url: '/',
+      views:{
+        '': {templateUrl: 'views/main.html'},
+        'jumbotron': {template: '<h1>ICS!</h1><p>is fun ... </p>'}
+      },
+      resolve: {
+        $title: function() { return 'ICS'; }
+      }
+    }).state('article', {
+      abstract: true,
+      views:{
+        '': {templateUrl: 'views/article.html'},
+      }
+    }).state('article.networking', {
+      url: '/networking',
+      views:{
+        'article': {templateUrl: 'views/networking.html'},
+        'jumbotron@': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+      },
+      resolve: {
+        $title: function() { return 'Networking security'; }
+      }
+    }).state('article.removable', {
+      url: '/removable',
+      views:{
+        'article': {templateUrl: 'views/removablemedia.html'},
+        'jumbotron@': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+      },
+      resolve: {
+        $title: function() { return 'Removable media'; }
+      }
+    });
+    $locationProvider.html5Mode(true);
+  })
+  .run(function ($rootScope, $state, $stateParams) {
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
   });
