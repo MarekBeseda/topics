@@ -52,6 +52,24 @@ angular
       resolve: {
         $title: function() { return 'Removable media'; }
       }
+    }).state('article.monitoring', {
+      url: '/monitoring',
+      views:{
+        'article': {templateUrl: 'views/monitoring.html'},
+        'jumbotron@': {template: '<h1>Monitoring!</h1><p>DYI NSA</p>'}
+      },
+      resolve: {
+        $title: function() { return 'Monitoring'; }
+      }
+    }).state('article.risk-incidence', {
+      url: '/risk-incidence',
+      views:{
+        'article': {templateUrl: 'views/risk-incidence.html'},
+        'jumbotron@': {template: '<h1>Risk & Incidence Mangement!</h1><p>Prevention is the best defence</p>'}
+      },
+      resolve: {
+        $title: function() { return 'Risk-incidence'; }
+      }
     });
     $locationProvider.html5Mode(true);
   })
