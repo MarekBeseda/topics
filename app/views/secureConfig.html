@@ -1,12 +1,44 @@
-<p>Having an approach to identify baseline technology builds for ensuring
-  configuration management can greatly improve the security of industrial systems.
-  A strategy should be developed in order to remove or disable unnecessary functionality
-  from systems, and to quickly fix known vulnerabilities, usually via patching.
-  Failure to do so is likely to result in increased risk of compromise of systems
- and information. </p>
-
-<p>THIS LEADS TO: (infographics with hyperlink to those examples)
-unauthorised changes to the systems, exploitation of software bugs or the unsecure system configuration. </p>
+<p><b>Why secure configuration of ICSs is so important?</b></p>
+<p>Secure configuration of ICSs plays a crucial role in preventing malicious attacks. A strategy should be developed in order to remove or disable unnecessary functionality from systems, and to quickly fix known vulnerabilities, usually via patching. Failure to do so is likely to result in increased
+  risk of compromise of systems and information. The biggest risks linked with improper configuration of ICSs include:
+</p>
+<ul>
+  <li><b>Exploatation of software bugs </b> - hackers may apply known vulnerabilities of the software in order to gain an access to the system or steal the data</li>
+  <li><b>Unauthorised access and exploatation of the system </b> - hackers may exploit the lack of security in the system in order to install malicious software or a backdoor for zero-day attack. It was the case with an attack on the Ukrainian power grid, where hackers were able to infect the system with BlackEnergy3 trojan in order to gain access to the system and perform the attack.
+      Common examples of system exploatation include:
+      <ul>
+        <li>Connection of unauthorised equipment (pendrives, etc.)</li>
+        <li>Creation of a back door access to the system, like in the ukrainian attack</li>
+        <li>Unauthorised access to the data</li>
+        <li>Taking advantage of unnecessary user rights and privilages</li>
+      </ul>
+  </li>
+</ul>
 
 <p>Improper system configuration puts security of industrial control system at risk. A third party may be able to gain the access to the information they are not authorised to see by taking advantage of unnecessary user rights, connecting peripheral devices which may infect the system, or create a backdoor for a zero-day exploit.
 </p>
+
+<p><b>How can you achieve a secure configuraiton?</b></b>
+
+<p><ul>
+<li><b>Policies to update the software:</b> implement policies to ensure that security patches are applied in an appropriate time frame, such a 14 days for critical patches. Automated patch management and software update tools might be helpful. In cases where it is not possible to patch a vulnerability steps should be taken to make it very difficult to exploit. This might include making it difficult for an attacker to communicate with the system.
+</li>
+<li><b>Disable unnecessary peripheral media access:</b> assess the need for access to peripheral devices and removable media. Disable ports and system functionality that does not support a user or business need.
+</li>
+<li><b>White-listing:</b> Create and maintain a whitelist of authorised applications and software that can be executed. In addition, systems should be capable of preventing the installation and execution of unauthorised software by employing process execution controls.
+</li>
+<li><b>Limit user privelages:</b>	Ensure that users with privileged system rights (administrators) have constrained internet and email access from their privileged account. This limits exposure to spear phishing and reduces the ability of an attacker to achieve wide system access through exploiting a single vulnerability.
+</li>
+</ul></p>
+
+<p><b>Examples of lack in secure configuration of ICSs:</b></b>
+  <p><ul>
+  <li><b>Ukrainian power grid attack</b> The cyber attacks in Ukraine are the first publicly acknowledged incidents to result in power outages. As future attacks may occur, it is important to scope the impacts of the incident. The Ukrainian incidents affected up to 225,000 customers in three different distribution‐level service territories and lasted for several hours. Hackers exploit improper system configuration by: successful spear fishing (lack of two-factor authentication in the system), infecting systems with BlackEnergy 3 and KillDisk Trojans, and theft of creditentials and use of VPN and existing remote access tools to enter and control the ICS network
+  </li>
+  <li><b>German steel mill attack</b> In late 2014, a German steel mill was the target of a cyberattack when hackers successfully took control of the production software and caused significant material damage to the site.
+    The attackers were able to hack to the office software network, from which they were able to access plans of control systems of the german steel mill and alter its security settings to cause a siginificant damage to the infrastructure.
+  </li>
+  </ul></p>
+
+  <p><b>Sources:</b>https://www.ncsc.gov.uk/guidance/10-steps-secure-configuration , https://www.symantec.com/connect/blogs/destructive-disakil-malware-linked-ukraine-power-outages-also-used-against-media-organizations, https://www.wired.com/2016/01/everything-we-know-about-ukraines-power-plant-hack/, https://www.sentryo.net/cyberattack-on-a-german-steel-mill/, https://ics.sans.org/media/E-ISAC_SANS_Ukraine_DUC_5.pdf
+  </b>
