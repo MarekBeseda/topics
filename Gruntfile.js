@@ -18,9 +18,9 @@ module.exports = function (grunt) {
     ngtemplates: 'grunt-angular-templates',
     cdnify: 'grunt-google-cdn'
   });
-  
+
   grunt.loadNpmTasks('grunt-contrib-less');
-  
+
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
@@ -89,10 +89,10 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9000,
+        port: 9001,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
-        livereload: 35729
+        livereload: 35728
       },
       livereload: {
         options: {
@@ -240,7 +240,7 @@ module.exports = function (grunt) {
             }
 				}
       }
-    }, 
+    },
 
     // Renames files for browser caching purposes
     filerev: {
