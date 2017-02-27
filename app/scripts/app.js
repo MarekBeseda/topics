@@ -23,8 +23,7 @@ angular
     $stateProvider.state('main', {
       url: '/',
       views:{
-        '': {templateUrl: 'views/main.html'},
-        'jumbotron': {template: '<h1>ICS!</h1><p>is fun ... </p>'}
+        '': {templateUrl: 'views/main.html'}
       },
       resolve: {
         $title: function() { return 'ICS'; }
@@ -32,13 +31,13 @@ angular
     }).state('article', {
       abstract: true,
       views:{
-        '': {templateUrl: 'views/article.html'},
+        '': {templateUrl: 'views/article.html'}
       }
     }).state('article.networking', {
       url: '/networking',
       views:{
         'article': {templateUrl: 'views/networking.html'},
-        'jumbotron@': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+        'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
       },
       resolve: {
         $title: function() { return 'Networking security'; }
@@ -47,7 +46,7 @@ angular
       url: '/removable',
       views:{
         'article': {templateUrl: 'views/removablemedia.html'},
-        'jumbotron@': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+        'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
       },
       resolve: {
         $title: function() { return 'Removable media'; }
@@ -56,7 +55,7 @@ angular
       url: '/monitoring',
       views:{
         'article': {templateUrl: 'views/monitoring.html'},
-        'jumbotron@': {template: '<h1>Monitoring!</h1><p>DYI NSA</p>'}
+        'header@article': {template: '<h1>Monitoring!</h1><p>DYI NSA</p>'}
       },
       resolve: {
         $title: function() { return 'Monitoring'; }
@@ -65,7 +64,7 @@ angular
       url: '/risk-incidence',
       views:{
         'article': {templateUrl: 'views/risk-incidence.html'},
-        'jumbotron@': {template: '<h1>Risk & Incidence Mangement!</h1><p>Prevention is the best defence</p>'}
+        'header@article': {template: '<h1>Risk & Incidence Management</h1><p>Prevention is the best defence</p>'}
       },
       resolve: {
         $title: function() { return 'Risk-incidence'; }
