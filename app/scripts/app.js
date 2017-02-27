@@ -52,6 +52,15 @@ angular
       resolve: {
         $title: function() { return 'Removable media'; }
       }
+    }).state('article.education', {
+      url: '/education',
+      views:{
+        'article': {templateUrl: 'views/usereducation.html'},
+        'jumbotron@': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+      },
+      resolve: {
+        $title: function() { return 'User education'; }
+      }
     }).state('article.monitoring', {
       url: '/monitoring',
       views:{
