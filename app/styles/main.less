@@ -99,11 +99,23 @@ body {
     .card{
       &:hover{
         box-shadow: 0px 5px 11px 3px rgba(0,0,0,.16), 0px 5px 11px 3px rgba(0,0,0,.12);
-      } 
-      .card-img-top{
-        max-height: 100%;
-        max-width: 100%;
-        border-radius: 0;
+      }
+      .card-top{
+        position: relative;
+        .card-img-top{
+          max-height: 100%;
+          max-width: 100%;
+          border-radius: 0;
+        }
+        .card-title{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          padding: 16px;
+          background: rgba(0.2,0.2,0.2,0.2);
+          margin: 0px;
+          color: #f7f7f7;
+        }
       }
     }
   }
