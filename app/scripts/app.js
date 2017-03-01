@@ -55,7 +55,7 @@ angular
       url: '/education',
       views:{
         'article': {templateUrl: 'views/usereducation.html'},
-        'jumbotron@': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+        'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
       },
       resolve: {
         $title: function() { return 'User education'; }
