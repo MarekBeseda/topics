@@ -134,9 +134,22 @@ body {
   h2{
     font-size: 30px;
   }
+  &.ng-enter {
+      /* transition on enter for .5s */
+      transition: .5s;
+
+      /* start with opacity 0 (invisible) */
+      opacity: 0;
+  }
+
+  /* end 'enter' transition */
+  &.ng-enter-active {
+      /* end with opacity 1 (fade in) */
+      opacity: 1;
+  }
 }
 
-.article{
+.container-article{
   position: relative;
   font-size: 17px;
   color: rgba(0,0,0,.7);
@@ -148,6 +161,7 @@ body {
       font-weight: 600;
       padding: 0 10px;
       li {
+        height: 25px;
         overflow: hidden;
         ul{
           transition: height 0.3s ease-in-out;
@@ -162,20 +176,35 @@ body {
       }
     }
   }
-  h3 {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: inherit;
-  }
-  h4 {
-    font-weight: 700;
-    font-size: 17px;
-    line-height: inherit;
+  .article{
+    h3 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: inherit;
+    }
+    h4 {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: inherit;
+    }
+    &.ng-enter {
+        /* transition on enter for .5s */
+        transition: .5s;
+
+        /* start with opacity 0 (invisible) */
+        opacity: 0;
+    }
+
+    /* end 'enter' transition */
+    &.ng-enter-active {
+        /* end with opacity 1 (fade in) */
+        opacity: 1;
+    }
   }
 }
 
 @media (min-width: 576px) {
-  .article {
+  .container-article {
     width: 540px;
     max-width: 100%;
   }
@@ -189,7 +218,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .article {
+  .container-article {
     width: 720px;
     max-width: 100%;
   }
@@ -207,7 +236,7 @@ body {
     width: 960px;
     max-width: 100%;
   }
-  .article {
+  .container-article {
     width: 720px;
     max-width: 100%;
   }
