@@ -121,6 +121,7 @@ body {
   }
 }
 
+
 .article-header{
   position: relative;
   top: -100px;
@@ -136,8 +137,31 @@ body {
 }
 
 .article{
+  position: relative;
   font-size: 17px;
   color: rgba(0,0,0,.7);
+  .article-navigation{
+    position: absolute;
+    right: -10em;
+    top:0;
+    ul{
+      font-weight: 600;
+      padding: 0 10px;
+      li {
+        overflow: hidden;
+        ul{
+          transition: height 0.3s ease-in-out;
+        }
+        &:not(.active) ul {
+          height: 0 !important;
+          font-weight: 400;
+        }
+        a {
+          padding: 0;
+        }
+      }
+    }
+  }
   h3 {
     font-weight: 700;
     font-size: 20px;
@@ -151,7 +175,7 @@ body {
 }
 
 @media (min-width: 576px) {
-  .article-container {
+  .article {
     width: 540px;
     max-width: 100%;
   }
@@ -165,7 +189,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .article-container {
+  .article {
     width: 720px;
     max-width: 100%;
   }
@@ -183,7 +207,7 @@ body {
     width: 960px;
     max-width: 100%;
   }
-  .article-container {
+  .article {
     width: 720px;
     max-width: 100%;
   }
