@@ -87,7 +87,25 @@ angular
              resolve: {
              $title: function() { return 'Secure Configuration'; }
              }
-             });
+           }).state('article.userprivileges', {
+               url: '/userprivileges',
+               views:{
+                 'article': {templateUrl: 'views/userprivileges.html'},
+                 'header@article': {template: '<h1>User Privileges</h1><p>I hate compt topics</p>'}
+               },
+               resolve: {
+                 $title: function() { return 'User-privileges'; }
+               }
+             }).state('article.remoteworking', {
+                 url: '/remoteworking',
+                 views:{
+                   'article': {templateUrl: 'views/remoteworking.html'},
+                   'header@article': {template: '<h1>Mobile and Home Working</h1><p>I hate computing topics</p>'}
+                 },
+                 resolve: {
+                   $title: function() { return 'Remote-working'; }
+                 }
+               });
     $locationProvider.html5Mode(true);
   })
   .run(function ($rootScope, $state, $stateParams) {
