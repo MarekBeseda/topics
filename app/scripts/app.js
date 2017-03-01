@@ -87,6 +87,15 @@ angular
              resolve: {
              $title: function() { return 'Secure Configuration'; }
              }
+           }).state('article.userprivileges', {
+               url: '/userprivileges',
+               views:{
+                 'article': {templateUrl: 'views/userprivileges.html'},
+                 'header@article': {template: '<h1>User Privileges</h1><p>I hate compt topics</p>'}
+               },
+               resolve: {
+                 $title: function() { return 'User-privileges'; }
+               }
              });
     $locationProvider.html5Mode(true);
   })
