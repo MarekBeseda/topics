@@ -80,12 +80,7 @@ body {
   padding: 5px 10px;
   transition: background-color 0.2s ease;
   &:hover{
-    background-color: fade(@primary100, 20%);
-    text-decoration: none;
-    color:@primary400; 
-  }
-  &:focus{
-    background-color: fade(@primary200, 40%);
+    background-color: rgba(0,0,0,.03);
     text-decoration: none;
     color:@primary400; 
   }
@@ -156,29 +151,49 @@ html,body {
     margin-left: calc(~"50% + 400px");
     white-space: nowrap;
     height: 100%;
-    padding-top: 3rem;
+    padding-top: 1rem;
     .article-sticky {
       top: 10px;
       position: sticky;
+      padding: 8px; 
       ul{
-        font-weight: 600;
-        padding: 0 10px;
-        li {
+         > li {
+          border-top: 1px rgba(0,0,0,0.11) solid;
+          padding: 8px 0px;
           overflow: hidden;
           ul{
             font-weight: 400;
             transition: height 0.3s ease-in-out;
             li{
+              border-top: 0px;
+              padding: 0px;
               overflow: visible;
-              height: 25px;
+              a{
+                padding: 8px 32px;
+                width: 100%;
+              }
             }
           }
           &:not(.active) ul {
             height: 0 !important;        
           }
-          a {
-            padding: 0;
+          &.active > a{
+            font-weight: 600;
+            background-color: rgba(0,0,0,.05);
+            color: @primary500;
           }
+          a {
+            padding: 8px 16px;
+            color: rgba(0,0,0,.9);
+            transition: background-color 0.2s ease;
+            &:hover{
+              background-color: rgba(0,0,0,.03);
+              color:@primary400; 
+            }
+          }
+        }
+        li:first-child{
+          border-top: 0px;
         }
       }
     }
