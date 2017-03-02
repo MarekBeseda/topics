@@ -121,7 +121,11 @@ body {
   }
 }
 
-
+.flex-container{
+  display: flex;
+  justify-content: flex-start;   /* adjustment */
+  position: relative;
+}
 .article-header{
   position: relative;
   top: -100px;
@@ -135,47 +139,55 @@ body {
     font-size: 30px;
   }
   &.ng-enter {
-      /* transition on enter for .5s */
       transition: .5s;
-
-      /* start with opacity 0 (invisible) */
       opacity: 0;
   }
-
-  /* end 'enter' transition */
   &.ng-enter-active {
-      /* end with opacity 1 (fade in) */
       opacity: 1;
   }
 }
 
-.container-article{
-  position: relative;
-  font-size: 17px;
-  color: rgba(0,0,0,.7);
-  .article-navigation{
+html,body {
+    height:100%;
+}
+
+.article-navigation{
     position: absolute;
-    right: -10em;
-    top:0;
-    ul{
-      font-weight: 600;
-      padding: 0 10px;
-      li {
-        height: 25px;
-        overflow: hidden;
-        ul{
-          transition: height 0.3s ease-in-out;
-        }
-        &:not(.active) ul {
-          height: 0 !important;
-          font-weight: 400;
-        }
-        a {
-          padding: 0;
+    margin-left: calc(~"50% + 400px");
+    white-space: nowrap;
+    height: 100%;
+    padding-top: 3rem;
+    .article-sticky {
+      top: 10px;
+      position: sticky;
+      ul{
+        font-weight: 600;
+        padding: 0 10px;
+        li {
+          overflow: hidden;
+          ul{
+            font-weight: 400;
+            transition: height 0.3s ease-in-out;
+            li{
+              overflow: visible;
+              height: 25px;
+            }
+          }
+          &:not(.active) ul {
+            height: 0 !important;        
+          }
+          a {
+            padding: 0;
+          }
         }
       }
     }
   }
+.container-article{
+  position: relative;
+  font-size: 17px;
+  color: rgba(0,0,0,.7);
+  
   .article{
     h3 {
       font-weight: 700;
@@ -188,16 +200,10 @@ body {
       line-height: inherit;
     }
     &.ng-enter {
-        /* transition on enter for .5s */
         transition: .5s;
-
-        /* start with opacity 0 (invisible) */
         opacity: 0;
     }
-
-    /* end 'enter' transition */
     &.ng-enter-active {
-        /* end with opacity 1 (fade in) */
         opacity: 1;
     }
   }

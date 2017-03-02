@@ -1,56 +1,60 @@
 <div class="card article-header">
   <div ui-view="header"class="card-block text-center"></div>
 </div>
-<div class="container container-article">
-  <div ui-view="article" class="article"></div>
+<div class="flex-container">
+  <div class="container container-article">
+    <div ui-view="article" class="article"></div>
+  </div>
   <div class="article-navigation">
-    <ul class="nav flex-column">
-      <li class="nav-item" ui-sref-active="active">
-        <a class="nav-link active" href="#" ui-sref="article.removable">Removable Media</a>
-        <ul class="nav flex-column" style="height: 150px">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Disabled</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Disabled</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item" ui-sref-active="active">
-        <a class="nav-link" href="#"  ui-sref="article.education">User Education</a>
-        <ul class="nav flex-column" style="height: 100px">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Disabled</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Disabled</a>
-      </li>
-    </ul>
+    <div class="article-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item" ui-sref-active="active">
+          <a class="nav-link" href="#" ui-sref="article.removable">Removable Media</a>
+          <ul class="nav flex-column" style="height: 150px">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Disabled</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Disabled</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" ui-sref-active="active">
+          <a class="nav-link" href="#"  ui-sref="article.education">User Education</a>
+          <ul class="nav flex-column" style="height: 100px">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" ng-click="gotoElement('education-recommendations')">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Disabled</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
