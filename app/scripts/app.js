@@ -124,7 +124,23 @@
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
   $rootScope.gotoElement = function (eID){
-    $location.hash('bottom');
+    $location.hash('eID');
     anchorSmoothScroll.scrollTo(eID);
   };
+  $rootScope.setFragment = function (fragment){
+    if(fragment !== ''){
+      if(window.location.hash !== '#' + fragment){
+        window.location.replace(window.location.pathname + '#'+ fragment);
+      }
+    } else {
+      window.location.replace(window.location.pathname + '#close');
+    }
+  };
+  /*$rootScope.$on('$stateChangeStart', 
+  function(){
+    if($state.includes('article')) {
+      $location.hash('');
+      anchorSmoothScroll.scrollTo('article-header');
+    }
+  });*/
 });

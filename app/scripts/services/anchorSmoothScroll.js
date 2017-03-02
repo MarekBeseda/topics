@@ -17,7 +17,7 @@ angular.module('icstopicsApp')
 
   function elmYPosition(eID) {
     var elm = document.getElementById(eID);
-    var y = elm.offsetTop;
+    var y = elm.offsetTop - 200;
     var node = elm;
     while (node.offsetParent && node.offsetParent !== document.body) {
       node = node.offsetParent;
@@ -26,7 +26,7 @@ angular.module('icstopicsApp')
   }
 
   this.scrollTo = function(eID) {
-    var startY = currentYPosition.bind(this);
+    var startY = currentYPosition();
     var stopY = elmYPosition(eID);
     var distance = stopY > startY ? stopY - startY : startY - stopY;
     if (distance < 100) {
