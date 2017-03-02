@@ -40,16 +40,7 @@
       'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
     },
     resolve: {
-      $title: function() { return 'Networking security'; }
-    }
-  }).state('article.removable', {
-    url: '/removable',
-    views:{
-      'article': {templateUrl: 'views/removablemedia.html'},
-      'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
-    },
-    resolve: {
-      $title: function() { return 'Removable media'; }
+      $title: function() { return 'Networking Security'; }
     }
   }).state('article.education', {
     url: '/education',
@@ -58,7 +49,25 @@
       'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
     },
     resolve: {
-      $title: function() { return 'User education'; }
+      $title: function() { return 'User Education'; }
+    }
+  }).state('article.malware', {
+    url: '/malware',
+    views:{
+      'article': {templateUrl: 'views/malwareprotection.html'},
+      'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+    },
+    resolve: {
+      $title: function() { return 'Malware Protection'; }
+    }
+  }).state('article.removable', {
+    url: '/removable',
+    views:{
+      'article': {templateUrl: 'views/removablemedia.html'},
+      'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+    },
+    resolve: {
+      $title: function() { return 'Removable Media'; }
     }
   }).state('article.monitoring', {
     url: '/monitoring',
@@ -76,7 +85,7 @@
       'header@article': {template: '<h1>Risk & Incidence Management</h1><p>Prevention is the best defence</p>'}
     },
     resolve: {
-      $title: function() { return 'Risk-incidence'; }
+      $title: function() { return 'Risk Incidence'; }
     }
   }).state('article.secureconfig', {
    url: '/secureconfig',
@@ -94,7 +103,7 @@
      'header@article': {template: '<h1>User Privileges</h1><p>I hate compt topics</p>'}
    },
    resolve: {
-     $title: function() { return 'User-privileges'; }
+     $title: function() { return 'User Privileges'; }
    }
  }).state('article.remoteworking', {
    url: '/remoteworking',
@@ -103,7 +112,7 @@
      'header@article': {template: '<h1>Mobile and Home Working</h1><p>I hate computing topics</p>'}
    },
    resolve: {
-     $title: function() { return 'Remote-working'; }
+     $title: function() { return 'Remote Working'; }
    }
  });
  $locationProvider.html5Mode(true);
