@@ -171,6 +171,9 @@ html,body {
     ul{
       .divider{
         margin: 8px 0;
+          @media screen and (max-height: 700px) {
+            margin: 3px 0;    
+          }
         border-top: 1px rgba(0,0,0,0.11) solid;
       }
        > .nav-item {
@@ -202,6 +205,10 @@ html,body {
         }
         a {
           padding: 8px 16px;
+          @media screen and (max-height: 700px) {
+            padding-top: 3px;  
+            padding-bottom: 3px;  
+          }
           color: rgba(0,0,0,.9);
           transition: background-color 0.2s ease;
           &:hover{
