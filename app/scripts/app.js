@@ -37,7 +37,7 @@
     url: '/networking',
     views:{
       'article': {templateUrl: 'views/networking.html'},
-      'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+      'header@article': {template: '<h1>Networking!</h1><p>How to make friends and influence people</p>'}
     },
     resolve: {
       $title: function() { return 'Networking Security'; }
@@ -46,7 +46,7 @@
     url: '/education',
     views:{
       'article': {templateUrl: 'views/usereducation.html'},
-      'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+      'header@article': {template: '<h1>User Education!</h1><p>MEdu Degrees</p>'}
     },
     resolve: {
       $title: function() { return 'User Education'; }
@@ -55,7 +55,7 @@
     url: '/malware',
     views:{
       'article': {templateUrl: 'views/malwareprotection.html'},
-      'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+      'header@article': {template: '<h1>Malware Protection!</h1><p>Unless the government wants you</p>'}
     },
     resolve: {
       $title: function() { return 'Malware Protection'; }
@@ -64,7 +64,7 @@
     url: '/removable',
     views:{
       'article': {templateUrl: 'views/removablemedia.html'},
-      'header@article': {template: '<h1>Networking!</h1><p>is not fun</p>'}
+      'header@article': {template: '<h1>Removable Media!</h1><p>Remove yourself from the outside - Dalai Lama</p>'}
     },
     resolve: {
       $title: function() { return 'Removable Media'; }
@@ -91,7 +91,7 @@
    url: '/secureconfig',
    views:{
      'article': {templateUrl: 'views/secureConfig.html'},
-     'jumbotron@': {template: '<h1>Secure config</h1><p>I hate computing topics</p>'}
+     'jumbotron@': {template: '<h1>Secure config</h1><p>Like the Netcraft workshop said</p>'}
    },
    resolve: {
      $title: function() { return 'Secure Configuration'; }
@@ -100,7 +100,7 @@
    url: '/userprivileges',
    views:{
      'article': {templateUrl: 'views/userprivileges.html'},
-     'header@article': {template: '<h1>User Privileges</h1><p>I hate compt topics</p>'}
+     'header@article': {template: '<h1>User Privileges</h1><p>The Social Stratification of Networks</p>'}
    },
    resolve: {
      $title: function() { return 'User Privileges'; }
@@ -109,7 +109,7 @@
    url: '/remoteworking',
    views:{
      'article': {templateUrl: 'views/remoteworking.html'},
-     'header@article': {template: '<h1>Mobile and Home Working</h1><p>I hate computing topics</p>'}
+     'header@article': {template: '<h1>Mobile and Home Working</h1><p>Nokia 101</p>'}
    },
    resolve: {
      $title: function() { return 'Remote Working'; }
