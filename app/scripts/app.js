@@ -114,7 +114,16 @@
    resolve: {
      $title: function() { return 'Remote Working'; }
    }
- });
+          }).state('article.ukraineCaseStudy', {
+                   url: '/ukraineCaseStudy',
+                   views:{
+                   'article': {templateUrl: 'views/ukraineCaseStudy.html'},
+                   'header@article': {template: '<h1>Ukraine Case Study</h1><p>Nokia 101</p>'}
+                   },
+                   resolve: {
+                   $title: function() { return 'Ukraine Case Study'; }
+                   }
+                   });
  $locationProvider.html5Mode(true);
 })
 .run(['$anchorScroll', function($anchorScroll) {
