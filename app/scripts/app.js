@@ -91,7 +91,7 @@
    url: '/secureconfig',
    views:{
      'article': {templateUrl: 'views/secureConfig.html'},
-     'jumbotron@': {template: '<h1>Secure config</h1><p>Like the Netcraft workshop said</p>'}
+     'header@article': {template: '<h1>Secure config</h1><p>Like the Netcraft workshop said</p>'}
    },
    resolve: {
      $title: function() { return 'Secure Configuration'; }
