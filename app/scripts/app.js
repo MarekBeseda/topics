@@ -116,7 +116,6 @@
    resolve: {
      $title: function() { return 'Remote Working'; }
    }
-<<<<<<< HEAD
   }).state('article.ukraineCaseStudy', {
    url: '/ukraineCaseStudy',
    views:{
@@ -127,18 +126,6 @@
    $title: function() { return 'Ukraine Case Study'; }
    }
   });
-=======
-          }).state('article.ukraineCaseStudy', {
-                   url: '/ukraineCaseStudy',
-                   views:{
-                   'article': {templateUrl: 'views/ukraineCaseStudy.html'},
-                   'header@article': {template: '<h1>Ukraine Case Study</h1><p>Shutting down a factory</p>'}
-                   },
-                   resolve: {
-                   $title: function() { return 'Ukraine Case Study'; }
-                   }
-                   });
->>>>>>> b7aee2d4256e02fe2d582b5be788ab361ab2edcf
  $locationProvider.html5Mode(true);
 })
 .run(['$anchorScroll', function($anchorScroll) {
