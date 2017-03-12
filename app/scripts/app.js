@@ -74,7 +74,7 @@
     url: '/monitoring',
     views:{
       'article': {templateUrl: 'views/monitoring.html'},
-      'header@article': {template: '<h1>Monitoring!</h1><p>DYI NSA</p>'}
+      'header@article': {template: '<h1>Monitoring!</h1><p>DIY NSA</p>'}
     },
     resolve: {
       $title: function() { return 'Monitoring'; }
@@ -142,7 +142,7 @@
       window.location.replace(window.location.pathname + '#close');
     }
   };
-  /*$rootScope.$on('$stateChangeStart', 
+  /*$rootScope.$on('$stateChangeStart',
   function(){
     if($state.includes('article')) {
       $location.hash('');
