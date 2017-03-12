@@ -1,0 +1,72 @@
+
+<p>The Equation Group was first discovered by Kaspersky Researchers in 2015. They have been marked as the masterminds behind Stuxnet, a virus that has destroyed the centrifuges in an Iranian nuclear weapons factory. Just last week, new Wikileaks leaks confirmed that the Equation Group is a section of the NSA. This was already suspected as their targets have been mostly been located in Russia, China, Mexico, and the Middle East with very few within the US or Europe.</p>
+
+<p>This following graphic shows the geographical extent of their hacking:</p>
+
+<div class="article-image" id="equation_map">
+  <div>
+    <div class="image-overlay">
+      <img src="/images/equation_map.jpg" alt="Equation Group Map" ng-click="setFragment('equation_map')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Equation Group Map of Operation</p>
+  </div>
+</div>
+
+<p>They have been behind 2 important viruses; <b>Flame</b> & <b>Grayfish</b>.</p>
+
+<h4>Flame:</h4>
+
+<blockquote class="blockquote">
+<p>
+Flame, also known as Flamer, sKyWIper, and Skywiper, is modular computer malware discovered in 2012 that attacks computers running the Microsoft Windows operating system. The program is being used for targeted cyber espionage in Middle Eastern countries.
+</p>
+</blockquote>
+<p>~ https://en.wikipedia.org/wiki/Flame_(malware)</p>
+
+<p>Mechanism:</p>
+<ul>
+<li>Faked a Microsoft Enforced Licensing Intermediate PCA certificate authority</li>
+<li>Modules posing as Microsoft official files</li>
+<li>Installed fake audio driver to maintain run-time</li>
+<li>Infected computers were bluetooth beacons of propagation</li>
+<li>LAN & USBs infected</li>
+</ul>
+
+<p>As a result, this virus could spread very easily. It’s estimated that it has infected about 1000 PCs, mainly in Iran. This suggests that it had instructions to only install itself on certain targeted machines, as 1000 is too little if it were left free propagation with its capabilities.</p>
+
+
+<h4>GrayFish:</h4>
+
+<blockquote class="blockquote">
+<p>
+GrayFish is the most modern and sophisticated malware implant from the Equation group. It is designed to provide an effective (almost “invisible”) persistence mechanism, hidden storage and malicious command execution inside the Windows operating system.
+</p>
+</blockquote>
+<p>~ file:///Users/nmatej1/Downloads/Equation_group_questions_and_answers.0.pdf</p>
+
+
+<p>According to Kaspersky, GrayFish is the most sophisticated known attack platform that the Equation Group (and hence the NSA) deployed.</p>
+
+<p>Mechanism:</p>
+<ul>
+<li>Once in, ready for install</li>
+<li>GrayFish installs itself onto firmware of hard-drives  & booting system</li>
+<li>This requires 12 drive architecture blue-prints - hacked or coerced</li>
+<li>Virtually impossible to delete</li>
+<li>If deleted, boot sequence reinstalls it</li>
+<li>Must REPLACE the HDD</li>
+<li>Saves obtained files onto hidden parts of the drive</li>
+<li>Controlled through standard Command & Control (C&C) servers</li>
+</ul>
+
+
+<p>This virus is speculated to have been used as a payload delivery for Stuxnet.</p>
+
+<p>The most interesting part is the attack vectors for payload deliveries. In case of <b>non air gapped</b> networks, other Equation group tools are used, such as DoubleFantasy, which is a Trojan that also validates whether the target is the intended one. If so, it releases its payload.</p>
+
+<p>For <b>air gapped</b> targets, the payload delivery is even more intriguing. Often newly ordered hardware components are intercepted during mail delivery and implanted with GrayFish. This happened with the USB for Stuxnet for example.</p>
+
+<p>GrayFish is also very hard to detect. Within its code it has a self-destruct sequence. If the boot sequence (which it has infected in order to propagate itself), it will delete itself and all evidence pointing to it from the computer. It was only detected by the so-called “Magnet of Threats”, which was a fake target server set-up by Kaspersky.</p>
