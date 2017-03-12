@@ -24,7 +24,8 @@
   $stateProvider.state('main', {
     url: '/',
     views:{
-      '': {templateUrl: 'views/main.html'}
+      '': {templateUrl: 'views/main.html'},
+      'jumbotron': {template: '<p>Industrial control systems security</p>'}
     },
     resolve: {
       $title: function() { return 'ICS'; }
@@ -115,16 +116,25 @@
    resolve: {
      $title: function() { return 'Remote Working'; }
    }
-          }).state('article.ukraineCaseStudy', {
-                   url: '/ukraineCaseStudy',
-                   views:{
-                   'article': {templateUrl: 'views/ukraineCaseStudy.html'},
-                   'header@article': {template: '<h1>Ukraine Case Study</h1><p>Shutting down a factory</p>'}
-                   },
-                   resolve: {
-                   $title: function() { return 'Ukraine Case Study'; }
-                   }
-                   });
+  }).state('article.ukraineCaseStudy', {
+   url: '/ukraineCaseStudy',
+   views:{
+   'article': {templateUrl: 'views/ukraineCaseStudy.html'},
+   'header@article': {template: '<h1>Ukraine Case Study</h1><p>All power grids matter</p>'}
+   },
+   resolve: {
+   $title: function() { return 'Ukraine Case Study'; }
+  }
+}).state('article.equationCaseStudy', {
+   url: '/equationCaseStudy',
+   views:{
+   'article': {templateUrl: 'views/equationCaseStudy.html'},
+   'header@article': {template: '<h1>Equation Group Case Study</h1><p>You know the drill, make them equal and subtract both sides</p>'}
+   },
+   resolve: {
+   $title: function() { return 'Equation Case Study'; }
+   }
+  });
  $locationProvider.html5Mode(true);
 })
 .run(['$anchorScroll', function($anchorScroll) {
@@ -149,4 +159,32 @@
       anchorSmoothScroll.scrollTo('article-header');
     }
   });*/
+}).run(function($rootScope){
+  $rootScope.quizzes = {
+    'test':{
+      'title' : 'lets test this thing',
+      'questions': [
+        {
+          'title': 'press C',
+          'correct': 2,
+          'options':[
+            'A',
+            'B',
+            'C',
+            'D'
+          ]
+        },
+        {
+          'title': 'press C',
+          'correct': 2,
+          'options':[
+            'A',
+            'B',
+            'C',
+            'D'
+          ]
+        }
+      ] 
+    }
+  };
 });
