@@ -17,7 +17,8 @@
   'ngSanitize',
   'ngTouch',
   'ui.router',
-  'ui.router.title'
+  'ui.router.title',
+  'smoothScroll'
   ])
  .config(function ($stateProvider, $locationProvider) {
   $stateProvider.state('main', {
@@ -129,13 +130,9 @@
 .run(['$anchorScroll', function($anchorScroll) {
   $anchorScroll.yOffset = 50;
 }])
-.run(function ($rootScope, $state, $stateParams, anchorSmoothScroll, $location) {
+.run(function ($rootScope, $state, $stateParams) {
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
-  $rootScope.gotoElement = function (eID){
-    $location.hash('eID');
-    anchorSmoothScroll.scrollTo(eID);
-  };
   $rootScope.setFragment = function (fragment){
     if(fragment !== ''){
       if(window.location.hash !== '#' + fragment){
