@@ -120,10 +120,19 @@
    url: '/ukraineCaseStudy',
    views:{
    'article': {templateUrl: 'views/ukraineCaseStudy.html'},
-   'header@article': {template: '<h1>Ukraine Case Study</h1><p>Nokia 101</p>'}
+   'header@article': {template: '<h1>Ukraine Case Study</h1><p>All power grids matter</p>'}
    },
    resolve: {
    $title: function() { return 'Ukraine Case Study'; }
+  }
+}).state('article.equationCaseStudy', {
+   url: '/equationCaseStudy',
+   views:{
+   'article': {templateUrl: 'views/equationCaseStudy.html'},
+   'header@article': {template: '<h1>Equation Group Case Study</h1><p>You know the drill, make them equal and subtract both sides</p>'}
+   },
+   resolve: {
+   $title: function() { return 'Equation Case Study'; }
    }
   });
  $locationProvider.html5Mode(true);
