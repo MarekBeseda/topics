@@ -1,7 +1,12 @@
 <div class="card quiz">
-  <div class="page" ng-show="page == 0">
-  <h3>{{::definition.title}}  </h3>
-    <a href="#" ng-click="page = 1;">Start quiz</a>
+  <div class="page intro" ng-show="page == 0">
+    <div class="card-block">
+      <h3>{{::definition.title}}  </h3>
+      <div class="row">
+        <div class="col-md-6 icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+        <div class="col-md-6 icon"><a href="#" ng-click="page = 1;"><i class="fa fa-play-circle" aria-hidden="true"></i></a></div>
+      </div>
+    </div>
   </div>
   <div class="page" ng-repeat="question in definition.questions" ng-show="page == ($index + 1)">
     <div class="row">
