@@ -49,9 +49,13 @@ body {
   }
 	.jumbotron{
     height: 200px;
-    background-image: url("/images/cover1.jpg");
-    background-size: cover;
+    background: url("/images/cover1.jpg");
     box-shadow: 0 5px 20px 0 rgba(0,0,0,.16), 0 5px 20px 0 rgba(0,0,0,.12);
+    p {
+      font-size: 3rem;
+      color: white;
+      font-style: capitalize;
+    }
 	}
 }
 
@@ -78,7 +82,7 @@ body {
 
 .card {
   border: 0px;
-  border-radius: 0 0 2px 2px;
+  border-radius: 2px;
   transition: box-shadow 0.2s ease;
   box-shadow: 0 2px 7px 1px rgba(0,0,0,.16), 0 2px 7px 1px rgba(0,0,0,.12);
   .card-header{
@@ -193,9 +197,41 @@ html,body {
     height:100%;
 }
 
+.quiz{
+  height: 350px;
+  .page{
+    &.ng-hide-remove {
+        transition: .5s;
+        opacity: 0;
+    }
+    &.ng-hide-remove-active {
+        opacity: 1;
+    }
+    .answer{
+      height: 36px;
+      margin: 10px 0;
+      text-align: center;
+      .fa{
+        font-size: 36px;
+        vertical-align: sub;
+      }
+    }
+    .row{
+      margin: 0;
+      width: 100%;
+      .title{
+        margin-bottom: 10px;
+      }
+    }
+    .progress{
+      border-radius: 2px 2px 0 0;
+    }
+  }
+}
+
 .article-navigation{
   position: absolute;
-  margin-left: calc(~"50% + 400px");
+  margin-left: calc(~"50% + 375px");
   white-space: nowrap;
   height: 100%;
   padding-top: 1rem;

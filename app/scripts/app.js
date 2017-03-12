@@ -24,7 +24,8 @@
   $stateProvider.state('main', {
     url: '/',
     views:{
-      '': {templateUrl: 'views/main.html'}
+      '': {templateUrl: 'views/main.html'},
+      'jumbotron': {template: '<p>Industrial control systems security</p>'}
     },
     resolve: {
       $title: function() { return 'ICS'; }
@@ -74,7 +75,7 @@
     url: '/monitoring',
     views:{
       'article': {templateUrl: 'views/monitoring.html'},
-      'header@article': {template: '<h1>Monitoring!</h1><p>DYI NSA</p>'}
+      'header@article': {template: '<h1>Monitoring!</h1><p>DIY NSA</p>'}
     },
     resolve: {
       $title: function() { return 'Monitoring'; }
@@ -115,16 +116,16 @@
    resolve: {
      $title: function() { return 'Remote Working'; }
    }
-          }).state('article.ukraineCaseStudy', {
-                   url: '/ukraineCaseStudy',
-                   views:{
-                   'article': {templateUrl: 'views/ukraineCaseStudy.html'},
-                   'header@article': {template: '<h1>Ukraine Case Study</h1><p>Nokia 101</p>'}
-                   },
-                   resolve: {
-                   $title: function() { return 'Ukraine Case Study'; }
-                   }
-                   });
+  }).state('article.ukraineCaseStudy', {
+   url: '/ukraineCaseStudy',
+   views:{
+   'article': {templateUrl: 'views/ukraineCaseStudy.html'},
+   'header@article': {template: '<h1>Ukraine Case Study</h1><p>Nokia 101</p>'}
+   },
+   resolve: {
+   $title: function() { return 'Ukraine Case Study'; }
+   }
+  });
  $locationProvider.html5Mode(true);
 })
 .run(['$anchorScroll', function($anchorScroll) {
@@ -149,4 +150,32 @@
       anchorSmoothScroll.scrollTo('article-header');
     }
   });*/
+}).run(function($rootScope){
+  $rootScope.quizzes = {
+    'test':{
+      'title' : 'lets test this thing',
+      'questions': [
+        {
+          'title': 'press C',
+          'correct': 2,
+          'options':[
+            'A',
+            'B',
+            'C',
+            'D'
+          ]
+        },
+        {
+          'title': 'press C',
+          'correct': 2,
+          'options':[
+            'A',
+            'B',
+            'C',
+            'D'
+          ]
+        }
+      ] 
+    }
+  };
 });
