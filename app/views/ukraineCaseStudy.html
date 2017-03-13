@@ -1,63 +1,70 @@
-<p>On December 23, 2015, the Ukrainian Kyivoblenergo, a regional electricity distribution company,
-   reported service outages to customers. The outages were due to a third party’s illegal entry into
-   the company’s computer and SCADA systems: Starting at approximately 3:35 p.m. local time, seven 110 kV
-   and 23 35 kV substations were disconnected for three hours. Later statements indicated that the cyber
-   attack impacted additional portions of the distribution grid and forced operators to switch to manual
-   mode.2, 3 The event was elaborated on by the Ukrainian news media, who conducted interviews and determined
-   that a foreign attacker remotely controlled the SCADA distribution management system.4 The outages were
-   originally thought to have affected approximately 80,000 customers, based on the Kyivoblenergo’s update
-   to customers. However, later it was revealed that three different distribution oblenergos (a term used
-   to describe an energy company) were attacked, resulting in several outages that caused approximately
-   225,000 customers to lose power across various areas.</p>
+<p>
+On December 23, 2015, the Ukrainian Kyivoblenergo, a regional electricity distribution company, reported service outages to customers. It was caused by third party’s illegal entry into the company’s computer and SCADA system (Supervisory control and data acquisition). Seven 110 kV and 2335 kV substations were disconnected for 3 hours. It was later revealed that the cyber attack impacted additional portions of the distribution grid and forced operators to switch to manual mode.
+</p>
+<blockquote class="blockquote">
+<p>
+The outages were originally thought to have affected approximately 80,000 customers, based on the Kyivoblenergo’s update to customers. However, later it was revealed that three different distribution oblenergos (a term used to describe an energy company) were attacked, resulting in several outages that caused approximately 225,000 customers to lose power across various areas. Within the Ukrainian electrical system, these attacks were directed at the regional distribution level, as shown below:
+</p>
+</blockquote>
+<p>~ Electricity sharing and analysis center, (2016). Analysis of the Cyber Attack on the Ukrainian Power Grid. </p>
 
-<p>Shortly after the attack, Ukrainian government officials claimed the outages were caused by
-  a cyber attack, and that Russian security services were responsible for the incidents.
-   Following these claims, investigators in Ukraine, as well as private companies and the U.S.
-   government, performed analysis and offered assistance to determine the root cause of the outage.
-    Both the E‐ISAC and SANS ICS team was involved in various efforts and analyses in relation to
-     this case since December 25, 2015, working with trusted members and organizations in the community. </p>
+<div class="article-image" id="monitoring_icsdiagram">
+  <div>
+    <div class="image-overlay">
+      <img src="/images/ukraine_system.png" alt="ICS Structure Diagram" ng-click="setFragment('monitoring_icsdiagram')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Ukraine electric system overview</p>
+  </div>
+</div>
 
-<h4>Keeping Perspective </h4>
+<p>Shortly after the attack, Ukrainian government officials claimed the outages were caused by a cyber attack, and that Russian security services were responsible for the incidents. Following these claims, investigators in Ukraine, as well as private companies and the U.S. government, performed analysis and offered assistance to determine the root cause of the outage.
+ </p>
 
-<p>The cyber attacks in Ukraine are the first publicly acknowledged incidents to result
-  in power outages. As future attacks may occur, it is important to scope the impacts of
-  the incident. Power outages should be measured in scale (number of customers and amount
-  of electricity infrastructure involved) and in duration to full restoration. The Ukrainian
+<h4>Perspective of the attack </h4>
+
+<blockquote class="blockquote">
+<p>
+The cyber attacks in Ukraine are the first publicly acknowledged incidents to result in power outages. The Ukrainian
   incidents affected up to 225,000 customers in three different distribution‐level service
-  territories and lasted for several hours. These incidents should be rated on a macro scale
-  as low in terms of power system impacts as the outage affected a very small number of overall
-  power consumers in Ukraine and the duration was limited. In contrast, it is likely that the
-  impacted companies rate these incidents as high or critical to the reliability of their
-  systems and business operations. </p>
+  territories and lasted for several hours.
+</p>
+</blockquote>
+<p>~ Electricity sharing and analysis center, (2016). Analysis of the Cyber Attack on the Ukrainian Power Grid. </p>
+
 
 <h4>Attacker Tactics Techniques </h4>
 
-<p>Direct attribution is unnecessary to learn from this attack and to consider mitigation
-  strategies; it is only necessary to use the mental model of how the cyber actor works to
-  understand the capabilities and general profile against which one is defending. The motive
-  and sophistication of this power grid attack is consistent with a highly structured and
-  resourced actor. This actor was co‐adaptive and demonstrated varying tactics and techniques
-  to match the defenses and environment of the three impacted targets. The mitigation section
-  of this document provides mitigation concepts related to the attack and how to develop a more
-  lasting mitigation strategy by anticipating future attacks. The attackers demonstrated a
+<p>The strategy and sophistication of this power grid attack is consistent with a highly structured and resourced third party actor. The attacker was very adaptive and demonstrated varying tactics and techniques to match the defenses and environment of the three impacted targets.
+The attackers demonstrated a
   variety of capabilities, including spear phishing emails, variants of the BlackEnergy 3
   malware, and the manipulation of Microsoft Office documents that contained the malware
-  to gain a foothold into the Information Technology (IT) networks of the electricity
-  companies. They demonstrated the capability to gain a foothold and harvest credentials
+  to gain an access to IT networks of the electricity
+  companies. They demonstrated the capability to steal credentials
   and information to gain access to the ICS network. Additionally, the attackers showed expertise,
-  not only in network connected infrastructure; such as Uninterruptable Power Supplies (UPSs),
-  but also in operating the ICSs through supervisory control system; such as the Human Machine
-  Interface (HMI), as shown in Figure 2. Finally, the adversaries demonstrated the capability
-  and willingness to target field devices at substations, write custom malicious firmware,
-  and render the devices, such as serial‐to‐ethernet convertors, inoperable and unrecoverable.
-  In one case, the attackers also used telephone systems to generate thousands of calls to
-  the energy company’s call center to deny access to customers reporting outages.
-  However, the strongest capability of the attackers was not in their choice of tools
+  not only in network connected infrastructure, such as Uninterruptable Power Supplies,
+  but also in operating the ICSs through supervisory control system, such as the Human Machine
+  Interface. </p>
+
+  <blockquote class="blockquote">
+  <p>
+    The adversaries demonstrated the capability
+    and willingness to target field devices at substations, write custom malicious firmware,
+    and render the devices, such as serial‐to‐ethernet convertors, inoperable and unrecoverable.
+    The attackers also used telephone systems to generate thousands of calls to
+    the energy company’s call center to deny access to customers reporting outages.
+  </p>
+  </blockquote>
+<p>
+  The strongest capability of the attackers was not in their choice of tools
   or in their expertise, but in their capability to perform long‐term reconnaissance
   operations required to learn the environment and execute a highly synchronized,
-  multistage, multisite attack. </p>
+  multistage, multisite attack.
+ </p>
 
-<p>The following is the list of things which hackers used</p>
+<p>The following is the list of techniques which hackers used</p>
 
 <div class="article-image" id="monitoring_icsdiagram">
   <div>
@@ -71,27 +78,27 @@
   </div>
 </div>
 
-<h4>Opportunities </h4>
+<h4>Attacker's opportunities </h4>
 
-<p>Multiple opportunities existed for the adversary to execute its attack. External
-  to the oblenergos and prior to the attack, there was a variety of open‐source
+<p>Multiple opportunities existed for the adversary to execute its attack. Prior to the attack, there was a variety of open‐source
   information available; including a detailed list of types of infrastructure such
   as Remote Terminal Unit (RTU) vendors and versions posted online by ICS vendors.
-  The VPNs into the ICS from the business network appear to lack two‐factor authentication.
+ </p>
+  <blockquote class="blockquote">
+  <p>
+      The VPNs into the ICS from the business network appear to lack two‐factor authentication.
   Additionally, the firewall allowed the adversary to remote admin out of the environment
-  by utilizing a remote access capability native to the systems. In addition, based on
-  media reporting, there did not appear to be any resident capability to continually
-  monitor the ICS network and search for abnormalities and threats through active
-  defense measures; like network security monitoring. These vulnerabilities would
-  have provided the adversary the opportunity to persist within the environment for
-  six months or more to conduct reconnaissance on the environment and subsequently
-  execute the attack. </p>
+  by utilizing a remote access capability native to the systems
+  </p>
+  </blockquote>
 
-  <p>Why these oblenergos were targeted remains an open debate. Based on the public
-    reporting, it is unknown if the targets were selected based on common technologies
-    in use, system architectures, reconnaissance operations, or service territories.
-    Opportunity‐based considerations for selecting a specific target may focus on an
-    attacker’s confidence and ability to cause an ICS effect. Some example decision
+  <p>Media reports revealed the there was no capability to continually
+  monitor the ICS network and search for abnormalities and threats through active
+  defense measures. These vulnerabilities provided the adversary the opportunity to conduct reconnaissance on the environment and subsequently
+  execute the attack.
+</p>
+
+  <p>Why these local distribution and supply services were targeted remains an open debate. Some example decision
     factors could include: </p>
 
   <ul>
