@@ -1,9 +1,9 @@
 <p>
-On December 23, 2015, the Ukrainian Kyivoblenergo, a regional electricity distribution company, reported service outages to customers. It was caused by third party’s illegal entry into the company’s computer and SCADA system (Supervisory control and data acquisition). Seven 110 kV and 2335 kV substations were disconnected for 3 hours. It was later revealed that the cyber attack impacted additional portions of the distribution grid and forced operators to switch to manual mode.
+On December 23, 2015, the Ukrainian Kyivoblenergo, a regional electricity distribution company, reported service outages to customers. Third party’s illegal entry into the company’s computer and Supervisory control and data acquisition system caused the power outage. Several 110 kV and 2335 kV substations were disconnected for 3 hours. It was later revealed that the cyber attack impacted additional portions of the distribution grid and forced operators to switch to manual mode.
 </p>
 <blockquote class="blockquote">
 <p>
-The outages were originally thought to have affected approximately 80,000 customers, based on the Kyivoblenergo’s update to customers. However, later it was revealed that three different distribution oblenergos (a term used to describe an energy company) were attacked, resulting in several outages that caused approximately 225,000 customers to lose power across various areas. Within the Ukrainian electrical system, these attacks were directed at the regional distribution level, as shown below:
+It was revealed that three different distribution oblenergos (Ukrainian term for energy companies) were attacked, resulting in several outages that caused approximately 225,000 customers to lose power across various areas. Within the Ukrainian electrical system, these attacks were directed at the regional distribution level, as shown below:
 </p>
 </blockquote>
 <p>~ Electricity sharing and analysis center, (2016). Analysis of the Cyber Attack on the Ukrainian Power Grid. </p>
@@ -20,7 +20,7 @@ The outages were originally thought to have affected approximately 80,000 custom
   </div>
 </div>
 
-<p>Shortly after the attack, Ukrainian government officials claimed the outages were caused by a cyber attack, and that Russian security services were responsible for the incidents. Following these claims, investigators in Ukraine, as well as private companies and the U.S. government, performed analysis and offered assistance to determine the root cause of the outage.
+<p>Shortly after the attack, Ukrainian government officials claimed the outages were caused by a cyber attack, and that Russian security services were responsible for the incidents. Investigators in Ukraine and the U.S. government performed analysis to determine what was the cause of the power outage.
  </p>
 
 <h4>Perspective of the attack </h4>
@@ -53,8 +53,8 @@ The attackers demonstrated a
     The adversaries demonstrated the capability
     and willingness to target field devices at substations, write custom malicious firmware,
     and render the devices, such as serial‐to‐ethernet convertors, inoperable and unrecoverable.
-    The attackers also used telephone systems to generate thousands of calls to
-    the energy company’s call center to deny access to customers reporting outages.
+    A telephone systems was also used by attackers in order to generate thousands of calls to
+    the energy company’s call center to block the customers reporting outages.
   </p>
   </blockquote>
 <p>
@@ -94,11 +94,11 @@ The attackers demonstrated a
 
   <p>Media reports revealed the there was no capability to continually
   monitor the ICS network and search for abnormalities and threats through active
-  defense measures. These vulnerabilities provided the adversary the opportunity to conduct reconnaissance on the environment and subsequently
+  defense measures. These vulnerabilities provided the attacker with the chance to do the reconnaissance on the environment and subsequently
   execute the attack.
 </p>
 
-  <p>Why these local distribution and supply services were targeted remains an open debate. Some example decision
+  <p>Why these local distribution and supply services were targeted remains an open debate. But according to "Electricity sharing and analysis center" some example decision
     factors could include: </p>
 
   <ul>
@@ -109,3 +109,90 @@ The attackers demonstrated a
     <li>Risk level of performing the operation and being discovered </li>
     <li>Achieved access and ability to move and act within the environment </li>
   </ul>
+
+<h4>ICS Cyber Chain Map</h4>
+<p>The ICS Cyber Kill Chain is a process which is aimed against a target with the intention of producing a desired effect. It is treated as a chain because it is made up by a series of stages, where mitigation of any stage implies breaking the chain and the attacker frustration. This concept was presented by Lockheed Martin and further extended to the ICS by SANS</p>
+
+<div class="article-image" id="monitoring_icsdiagram">
+  <div>
+    <div class="image-overlay">
+      <img src="/images/ukraine_kill_chain.png" alt="ICS Structure Diagram" ng-click="setFragment('monitoring_icsdiagram')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Ukraine Attack Cyber Kill Chain, source: https://ics.sans.org/media/E-ISAC_SANS_Ukraine_DUC_5.pdf</p>
+  </div>
+</div>
+
+<p> The following steps show how ICS attack was prepared and carried out (Stage 1):
+</p>
+
+<ul>
+  <li><b>Reconnaissance:</b> the energy supply and distribution centers had high levels of automation in their distribution system enabling the attackers to be able to remotely control the system</li>
+  <li><b>Weaponization</b> and <b>Targeting:</b> the adversaries weaponized Microsoft Office documents (Excel and Word) by embedding BlackEnergy 3 within the documents</li>
+  <li><b>Delivery</b>, <b>Exploit</b> and <b>Install</b> individuals in the administrative or IT network of the electricity companies got emails with the malicious Office documents. When the documents were opened BlackEnergy 3 malware enbled the communication between the attackers and the infected system</li>
+</ul>
+
+<div class="article-image" id="monitoring_icsdiagram">
+  <div>
+    <div class="image-overlay">
+      <img src="/images/ukraine_macro.png" alt="ICS Structure Diagram" ng-click="setFragment('monitoring_icsdiagram')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Infected Office file (enabling the macro will install malicious files), source: https://ics.sans.org/media/E-ISAC_SANS_Ukraine_DUC_5.pdf</p>
+  </div>
+</div>
+
+<p>Stage 2: </p>
+
+<ul>
+  <li><b>Test:</b> E‐ISAC and the SANS ICS team concluded that the attacker did test his capabilities</li>
+  <li><b>Deliver:</b> the adversaries delivered themselves to the system using remote administration tools</li>
+  <li><b>Install/Modify:</b> malicious software identified as a modified or customized KillDisk was installed across the environment</li>
+</ul>
+
+<h4>Lessons learned according to the E-ISAC</h4>
+
+<ul>
+  <li><b>Spear fishing:</b> <blockquote class="blockquote">
+  <p>
+  In the attack, the adversary delivered a targeted email with a malicious attachment that appeared to come from a trusted source to specific individuals within the organizations. Initial mitigation recommendations would point to end‐user awareness training and ongoing phishing testing
+  </p>
+  </blockquote></li>
+  <li><b>Credential Theft:</b> <blockquote class="blockquote">
+  <p>
+  The adversary used BlackEnergy 3 to utilize keystroke loggers to perform a credential theft. As an initial mitigation approach, we recommend that organizations obtain the YARA rules for the latest IOCs
+  </p>
+  </blockquote></li>
+  <li><b>Data Exfiltration</b> <blockquote class="blockquote">
+  <p>
+  After the attackers achieved the necessary freedom of movement and action in the IT infrastructure, they began exfiltrating the necessary information and discovering the hosts to devise an attack concept to open breakers and cause a power outage.  The mitigation recommendation here is to understand where this type of information exists inside your business network and ICSs
+  </p>
+  </blockquote></li>
+  <li><b>VPN Attack</b> <blockquote class="blockquote">
+  <p>
+  Mitigation guidance based on the attacker approach used in this campaign recommends using two‐factor authentication with user tokens to strengthen authentication
+  </p>
+  </blockquote></li>
+  <li><b>Workstation Remote Access</b> <blockquote class="blockquote">
+  <p>
+  Based on the details provided, the adversaries used the organizations’ workstations remotely (while the attacker was physically remote, logically they were local to the host) to conduct Stage 2 of the attack. Mitigation recommendations focus on disabling remote access at the host and at the perimeter firewall
+  </p>
+  </blockquote></li>
+
+</ul>
+
+<h5>References:</h5>
+<ul>
+<li>Electricity sharing and analysis center, (2016). Analysis of the Cyber Attack on the Ukrainian Power Grid. Accessed February 2017, Available at:<br><a href="https://ics.sans.org/media/E-ISAC_SANS_Ukraine_DUC_5.pdf">https://ics.sans.org/media/E-ISAC_SANS_Ukraine_DUC_5.pdf</a></li>
+<li>Symnatec, (2016). Destructive Disakil malware linked to Ukraine power outages also used against media organizations, Accessed February 2017, Available at:<br><a href="https://www.eset.com/int/about/newsroom/research/eset-finds-connection-between-cyber-espionage-and-electricity-outage-in-ukraine/">https://www.eset.com/int/about/newsroom/research/eset-finds-connection-between-cyber-espionage-and-electricity-outage-in-ukraine/</a></li>
+<li>ESET Finds Connection Between Cyber Espionage and Electricity Outage in Ukraine, Available at: <br><a href="https://www.wired.com/2016/01/everything-we-know-about-ukraines-power-plant-hack/">https://www.wired.com/2016/01/everything-we-know-about-ukraines-power-plant-hack/</a></li>
+<li>Ukraine sees Russian hand in cyber attacks on power grid, Accessed February 2017, Available at: <br><a href="http://mobile.reuters.com/article/idUSKCN0VL18E">http://mobile.reuters.com/article/idUSKCN0VL18E</a></li>
+<li>The Industrial Control System Cyber Kill Chain, Accessed February 2017, Available at: <br><a href="https://www.sans.org/reading-room/whitepapers/ICS/industrial-control-system-cyber-kill-chain-36297">https://www.sans.org/reading-room/whitepapers/ICS/industrial-control-system-cyber-kill-chain-36297</a></li>
+<li>BlackEnergy APT Attacks in Ukraine employ spearphishing with Word documents, Accessed February 2017, Available at: <br><a href="https://securelist.com/blog/research/73440/blackenergy-apt-attacks-in-ukraine-employ-spearphishing-with-word-documents/">https://securelist.com/blog/research/73440/blackenergy-apt-attacks-in-ukraine-employ-spearphishing-with-word-documents/</a></li>
+<li>Ongoing Sophisticated Malware Campaign Compromising ICS, Accessed February 2017, Available at: <br><a href="https://ics-cert.us-cert.gov/alerts/ICS-ALERT-14-281-01B">https://ics-cert.us-cert.gov/alerts/ICS-ALERT-14-281-01B</a></li>
+<li>Potential Sample of Malware from the Ukrainian Cyber Attack Uncovered, Accessed February 2017, Available at: <br><a href="https://ics.sans.org/blog/2016/01/01/potential-sample-of-malware-from-the-ukrainian-cyber-attack-uncovered">https://ics.sans.org/blog/2016/01/01/potential-sample-of-malware-from-the-ukrainian-cyber-attack-uncovered</a></li>
+</ul>
