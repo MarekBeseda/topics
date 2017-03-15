@@ -29,24 +29,26 @@ angular.module('icstopicsApp')
           scope.page++;
         };
         scope.quizStyle = function(){
+          var sum = 0;
           if(scope.page === 0){
             return {height: 200};
           } else if (scope.page === scope.definition.questions.length + 1){
-            var sum = 0;
+            sum = 0;
             angular.forEach(scope.definition.questions, function(q) {
               angular.forEach(q.options, function(o){
-                sum += o.length / 50 * 26 + 50;
+                sum += o.length / 50 * 30 + 40;
               });
             });
-            return {height: 200 + sum};
-          } else if(scope.page === 1){
-            return {height: (100 + scope.definition.questions[scope.page - 1].options.length * 50)};
+            return {height: 250 + sum};
           } else {
-            var sum = scope.definition.questions[scope.page - 1].title / 35 * 30;
+            sum = Math.ceil(scope.definition.questions[scope.page - 1].title.length / 45) * 35;
+            if(scope.page !== 1){
+              sum += 50;
+            }
             angular.forEach(scope.definition.questions[scope.page - 1].options, function(o){
-              sum += o.length / 80 * 26 + 50;
+              sum += Math.ceil(o.length / 80) * 30 + 20;
             });
-            return {height: (200 + sum)};
+            return {height: 100 + sum};
           }
         };
       }
