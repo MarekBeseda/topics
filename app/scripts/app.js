@@ -24,8 +24,7 @@
   $stateProvider.state('main', {
     url: '/',
     views:{
-      '': {templateUrl: 'views/main.html'},
-      'jumbotron': {template: '<p>Industrial control systems security</p>'}
+      '': {templateUrl: 'views/main.html'}
     },
     resolve: {
       $title: function() { return 'ICS'; }
@@ -184,7 +183,108 @@
             'D'
           ]
         }
-      ] 
+      ]
+    },
+    'secure_config':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'The internet connection for ICS should be',
+          'correct': 1,
+          'options':[
+            'as fast as possible',
+            'limited as much as possible',
+            'set up using the newest technologies',
+            'not secured at all'
+          ]
+        },
+        {
+          'title': 'Users privileges should',
+          'correct': 2,
+          'options':[
+            'be the same for all users',
+            'be very limited for all users',
+            'be tailored to the user role following "least privilage" principle',
+            'block the internet connection and email access for all users'
+          ]
+        },
+        {
+          'title': 'Why secure configuration is so important?',
+          'correct': 3,
+          'options':[
+            'It can save money',
+            'It makes yoo look professional',
+            'It makes the system faster',
+            'It can prevent malicious attacks'
+          ]
+        }
+      ]
+    },
+    'user_privileges':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What is the "least privilage" principle?',
+          'correct': 1,
+          'options':[
+            'all users are provided with strictly limited privileges',
+            'users are only provided with the privileges that they need to do their job',
+            'users do not have any privileges',
+          ]
+        },
+        {
+          'title': 'Users privileges should',
+          'correct': 2,
+          'options':[
+            'be the same for all users',
+            'be very limited for all users',
+            'be tailored to the user role following "least privilage" principle',
+            'block the internet connection and email access for all users'
+          ]
+        },
+        {
+          'title': 'How to effectively manage user privileges?',
+          'correct': 0,
+          'options':[
+            'Decide what privileges user needs and limit the number of privileged users',
+            'Review user accounts, decide what privileges user needs and increase the number of privileged users',
+            'Monitor users, introduce standards for user access control and grant admin privileges to all users'
+          ]
+        }
+      ]
+    },
+    'remote_working':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What is a spearphishing?',
+          'correct': 1,
+          'options':[
+            'It is an e-mail fraud attempt to steal confidential data',
+            'It is a fishing with a spear instead of a rod',
+            'It is a network configuration',
+          ]
+        },
+        {
+          'title': 'What are the recommendations?',
+          'correct': 2,
+          'options':[
+            'Allow all users to work in the way they like',
+            'Do not allow users to work remotely',
+            'Educate useres and introduce the use of VPN'
+
+          ]
+        },
+        {
+          'title': 'What is the risk for ICS linked with remote working?',
+          'correct': 0,
+          'options':[
+            'Theft of the device or man-in-the-middle attack',
+            'User can procrastinate instead of working',
+            'Worse efficiency of the workers'
+          ]
+        }
+      ]
     }
   };
 });

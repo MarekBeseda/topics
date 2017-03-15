@@ -212,15 +212,11 @@ html,body {
         opacity: 1;
     }
     &.intro{
-      h3{
-
-      }
       .fa{
         font-size: 84px;
       }
     }
     .answer{
-      height: 36px;
       margin: 10px 0;
       text-align: center;
       .fa{
@@ -235,9 +231,13 @@ html,body {
         margin-bottom: 10px;
       }
     }
-    .progress{
-      border-radius: 2px 2px 0 0;
-      width: 100%;
+  }
+
+  .progress{
+    border-radius: 2px 2px 0 0;
+    width: 100%;
+    .progress-bar{
+      transition: width 0.5s;
     }
   }
 }
