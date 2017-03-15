@@ -16,10 +16,12 @@ angular.module('icstopicsApp')
       },
       link: function postLink(scope) {
         scope.page = 0;
+        scope.correct = 0;
         scope.answers = [];
         scope.answered = function(index){
           if(scope.definition.questions[scope.page - 1].correct === index){
             scope.lastCorrect = true;
+            scope.correct++;
           } else {
             scope.lastCorrect = false;
           }
