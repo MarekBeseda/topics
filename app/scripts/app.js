@@ -253,6 +253,41 @@
         }
       ]
     },
+    'removable_media':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'When a removable storage device reached the end of its life cycle, the correct procedure is to',
+          'correct': 2,
+          'options':[
+            'Dispose of it without any special procedures',
+            'Delete all files on it and dispose of it afterwards',
+            'Do a multi-pass wipe or have it wiped by a certified service',
+            'Erase it and give it to an employee'
+          ]
+        },
+        {
+          'title': 'How many per cent of confirmed data breaches are accounted for by lost removable storage and personal devices?',
+          'correct': 1,
+          'options':[
+            '30%',
+            '40%',
+            '50%',
+            '60%'
+          ]
+        },
+        {
+          'title': 'What level of removable media freedom of use is acceptable for ICS?',
+          'correct': 2,
+          'options':[
+            'Every user can use their personal removable media',
+            'Users are not allowed to use any kind of removable device',
+            'Users are only allowed to use devices issued to them',
+            'Users are allowed to use issued media for personal and professional use'
+          ]
+        }
+      ]
+    },
     'remote_working':{
       'title' : 'Test your knowledge!',
       'questions': [
