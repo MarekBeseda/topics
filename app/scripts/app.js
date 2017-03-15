@@ -246,9 +246,42 @@
           'title': 'How to effectively manage user privileges?',
           'correct': 0,
           'options':[
-            'Review user accounts, decide what privileges user needs and limit the number of privileged users',
+            'Decide what privileges user needs and limit the number of privileged users',
             'Review user accounts, decide what privileges user needs and increase the number of privileged users',
             'Monitor users, introduce standards for user access control and grant admin privileges to all users'
+          ]
+        }
+      ]
+    },
+    'remote_working':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What is a spearphishing?',
+          'correct': 1,
+          'options':[
+            'It is an e-mail fraud attempt to steal confidential data',
+            'It is a fishing with a spear instead of a rod',
+            'It is a network configuration',
+          ]
+        },
+        {
+          'title': 'What are the recommendations?',
+          'correct': 2,
+          'options':[
+            'Allow all users to work in the way they like',
+            'Do not allow users to work remotely',
+            'Educate useres and introduce the use of VPN'
+
+          ]
+        },
+        {
+          'title': 'What is the risk for ICS linked with remote working?',
+          'correct': 0,
+          'options':[
+            'Theft of the device or man-in-the-middle attack',
+            'User can procrastinate instead of working',
+            'Worse efficiency of the workers'
           ]
         }
       ]
