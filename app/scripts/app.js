@@ -192,20 +192,20 @@
           'title': 'The internet connection for ICS should be',
           'correct': 1,
           'options':[
-            'as fast as possible',
-            'limited as much as possible',
-            'set up using the newest technologies',
-            'not secured at all'
+            'As fast as possible',
+            'Limited as much as possible',
+            'Set up using the newest technologies',
+            'Not secured at all'
           ]
         },
         {
           'title': 'Users privileges should',
           'correct': 2,
           'options':[
-            'be the same for all users',
-            'be very limited for all users',
-            'be tailored to the user role following "least privilage" principle',
-            'block the internet connection and email access for all users'
+            'Be the same for all users',
+            'Be very limited for all users',
+            'Be tailored to the user role following "least privilage" principle',
+            'Block the internet connection and email access for all users'
           ]
         },
         {
@@ -227,7 +227,7 @@
           'title': 'What is the "least privilage" principle?',
           'correct': 1,
           'options':[
-            'all users are provided with strictly limited privileges',
+            'All users are provided with strictly limited privileges',
             'users are only provided with the privileges that they need to do their job',
             'users do not have any privileges',
           ]
@@ -236,10 +236,10 @@
           'title': 'Users privileges should',
           'correct': 2,
           'options':[
-            'be the same for all users',
-            'be very limited for all users',
-            'be tailored to the user role following "least privilage" principle',
-            'block the internet connection and email access for all users'
+            'Be the same for all users',
+            'Be very limited for all users',
+            'Be tailored to the user role following "least privilage" principle',
+            'Block the internet connection and email access for all users'
           ]
         },
         {
@@ -282,6 +282,66 @@
             'Theft of the device or man-in-the-middle attack',
             'User can procrastinate instead of working',
             'Worse efficiency of the workers'
+          ]
+        }
+      ]
+    },
+    'risk_quiz':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What percentage of all cyber attacks originates from inadequate security technology?',
+          'correct': 1,
+          'options':[
+            '15%',
+            '30%',
+            '55%',
+            '70%'
+          ]
+        },
+        {
+          'title': 'How should one approach the early part of a cyber incidence investigation?',
+          'correct': 1,
+          'options':[
+            'Figure out what the malicious files do at all cost',
+            'Classify the impact of the incidence, its priority, and assign personnel',
+            'Investigate every security incident the same have anyone available handle it',
+            'Look at the malicious files, delete them ASAP to prevent further incidents'
+          ]
+        },
+        {
+          'title': 'What is an often neglected and important part of incident mitigation?',
+          'correct': 3,
+          'options':[
+            'Air gapping important systems to prevent entrance',
+            'Malware prevention as well as network protection capabilities for prevention',
+            'User education and their integrity',
+            'Quality assurance, accountability, and availability of an assigned mitigation force'
+          ]
+        }
+      ]
+    },
+    'monitoring_quiz':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What does an air gapped ICS network mean?',
+          'correct': 1,
+          'options':[
+            'Physical parts not being connected to any network',
+            'The ICS not being connected to any outside network but has physical systems connected to it',
+            'There’s a physical wall protecting all critical server infrastructure from hands-on tampering',
+            'There’s no digital connection whatsoever within the system'
+          ]
+        },
+        {
+          'title': 'What is not an entrance point of malware in air gapped Industrial Control Systems?',
+          'correct': 0,
+          'options':[
+            'Through outer network and through it digitally to the physical systems',
+            'Through physical media access to the inner isolated network',
+            'Through malicious insiders',
+            'Digitally through an incorrectly air gapped network'
           ]
         }
       ]
