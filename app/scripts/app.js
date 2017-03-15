@@ -253,6 +253,76 @@
         }
       ]
     },
+    'removable_media':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'When a removable storage device reached the end of its life cycle, the correct procedure is to',
+          'correct': 2,
+          'options':[
+            'Dispose of it without any special procedures',
+            'Delete all files on it and dispose of it afterwards',
+            'Do a multi-pass wipe or have it wiped by a certified service',
+            'Erase it and give it to an employee'
+          ]
+        },
+        {
+          'title': 'How many per cent of confirmed data breaches are accounted for by lost removable storage and personal devices?',
+          'correct': 1,
+          'options':[
+            '30%',
+            '40%',
+            '50%',
+            '60%'
+          ]
+        },
+        {
+          'title': 'What level of removable media freedom of use is acceptable for ICS?',
+          'correct': 2,
+          'options':[
+            'Every user can use their personal removable media',
+            'Users are not allowed to use any kind of removable device',
+            'Users are only allowed to use devices issued to them',
+            'Users are allowed to use issued media for personal and professional use'
+          ]
+        }
+      ]
+    },
+    'user_education':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'When creating a security policy, ICS should',
+          'correct': 2,
+          'options':[
+            'Find a suitable one on the internet and apply it directly',
+            'Find a suitable one on the internet and adapt crucial parts',
+            'Specially develop a policy suitable to every aspect of their systems',
+            'Assess only aspects of security, which have been breached previously'
+          ]
+        },
+        {
+          'title': 'How many per cent of recipients of phishing mail open the malicious links and documents?',
+          'correct': 0,
+          'options':[
+            'Around 10%',
+            'Around 30%',
+            'Around 50%',
+            'Around 70%'
+          ]
+        },
+        {
+          'title': 'What is the most common attachment in phishing e-mails?',
+          'correct': 3,
+          'options':[
+            'Audio and video files',
+            'Executable files',
+            'File archives',
+            'Office .doc files'
+          ]
+        }
+      ]
+    },
     'remote_working':{
       'title' : 'Test your knowledge!',
       'questions': [
