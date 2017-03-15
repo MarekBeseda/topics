@@ -24,8 +24,7 @@
   $stateProvider.state('main', {
     url: '/',
     views:{
-      '': {templateUrl: 'views/main.html'},
-      'jumbotron': {template: '<p>Industrial control systems security</p>'}
+      '': {templateUrl: 'views/main.html'}
     },
     resolve: {
       $title: function() { return 'ICS'; }
