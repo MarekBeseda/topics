@@ -198,19 +198,20 @@ html,body {
 }
 
 .quiz{
+  transition: height 0.5s ease; 
+  margin-bottom: 20px;
   .page{
-    height: 350px;
+    overflow: hidden;;
+    height: 100%;
     opacity: 1;
-    transition: height 0.5s ease, opacity 0s; 
     &.ng-hide-remove {
-        transition: opacity .5s, height 0.5s ease-out;
-        opacity: 0;
+      transition: opacity 0.5s;
+      opacity: 0;
     }
     &.ng-hide-remove-active {
         opacity: 1;
     }
     &.intro{
-      height: 200px;
       h3{
 
       }
@@ -236,6 +237,7 @@ html,body {
     }
     .progress{
       border-radius: 2px 2px 0 0;
+      width: 100%;
     }
   }
 }
