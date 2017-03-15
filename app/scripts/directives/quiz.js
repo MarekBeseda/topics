@@ -32,11 +32,21 @@ angular.module('icstopicsApp')
           if(scope.page === 0){
             return {height: 200};
           } else if (scope.page === scope.definition.questions.length + 1){
-            return {height: 600};
+            var sum = 0;
+            angular.forEach(scope.definition.questions, function(q) {
+              angular.forEach(q.options, function(o){
+                sum += o.length > 50 ? 76 : 50;
+              });
+            });
+            return {height: 200 + sum};
           } else if(scope.page === 1){
             return {height: (100 + scope.definition.questions[scope.page - 1].options.length * 50)};
           } else {
-            return {height: (150 + scope.definition.questions[scope.page - 1].options.length * 50)};
+            var sum = 0;
+            angular.forEach(scope.definition.questions[scope.page - 1].options, function(o){
+              sum += o.length > 80 ? 76 : 50;
+            });
+            return {height: (200 + sum)};
           }
         };
       }

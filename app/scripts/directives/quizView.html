@@ -36,10 +36,9 @@
         <tbody>
           <tr ng-repeat-start="question in definition.questions" ng-init="$qindex = $index">
             <td rowspan="{{question.options.length}}" class="align-middle">{{::question.title}}</td>
-            </td>
-            <td>
-              {{::question.options[0]}}
-            </td>
+            <td ng-if="question.correct === 0" class="table-success">{{::question.options[0]}}</td>
+            <td ng-if="answers[$qindex] === 0 && question.correct !== 0" class="table-danger">{{::question.options[0]}}</td>
+            <td ng-if="answers[$qindex] !== 0 && question.correct !== 0">{{::question.options[0]}}</td>
           </tr>
           <tr ng-repeat-end ng-repeat="answer in question.options" ng-if="$index > 0" ng-switch="question.correct === $index ? 'correct' : (answers[$qindex] == $index ? 'wrong' : 'default')">
             <td ng-switch-when="default">{{::answer}}</td>
