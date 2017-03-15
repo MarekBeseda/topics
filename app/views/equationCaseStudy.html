@@ -15,28 +15,7 @@
   </div>
 </div>
 
-<p>They have been behind 2 important viruses; <b>Flame</b> & <b>Grayfish</b>.</p>
-
-<h4>Flame:</h4>
-
-<blockquote class="blockquote">
-<p>
-Flame, also known as Flamer, sKyWIper, and Skywiper, is modular computer malware discovered in 2012 that attacks computers running the Microsoft Windows operating system. The program is being used for targeted cyber espionage in Middle Eastern countries.
-</p>
-</blockquote>
-<p>~ https://en.wikipedia.org/wiki/Flame_(malware)</p>
-
-<p>Mechanism:</p>
-<ul>
-<li>Faked a Microsoft Enforced Licensing Intermediate PCA certificate authority</li>
-<li>Modules posing as Microsoft official files</li>
-<li>Installed fake audio driver to maintain run-time</li>
-<li>Infected computers were bluetooth beacons of propagation</li>
-<li>LAN & USBs infected</li>
-</ul>
-
-<p>As a result, this virus could spread very easily. It’s estimated that it has infected about 1000 PCs, mainly in Iran. This suggests that it had instructions to only install itself on certain targeted machines, as 1000 is too little if it were left free propagation with its capabilities.</p>
-
+<p>They have been behind 2 important viruses; <b>GrayFish</b> & <b>Flame</b>.</p>
 
 <h4>GrayFish:</h4>
 
@@ -58,9 +37,11 @@ GrayFish is the most modern and sophisticated malware implant from the Equation
 <li>Virtually impossible to delete</li>
 <li>If deleted, boot sequence reinstalls it</li>
 <li>Must REPLACE the HDD</li>
-<li>Saves obtained files onto hidden parts of the drive</li>
-<li>Controlled through standard Command & Control (C&C) servers</li>
 </ul>
+
+<p>To store stolen information, as well as its own auxiliary information, GrayFish implements its own encrypted Virtual File System (VFS) inside the Windows registry.</p>
+
+<p>Infected machines are then controlled through standard Command & Control (C&C) servers of the Equation Group. The Kaspersky Lab has managed to re-register a few dozen expiring C&C servers. This is how it was able to monitor Equation Groups activities. It estimates that there's around 300 such servers existing.</p>
 
 
 <p>This virus is speculated to have been used as a payload delivery for Stuxnet.</p>
@@ -69,4 +50,54 @@ GrayFish is the most modern and sophisticated malware implant from the Equation
 
 <p>For <b>air gapped</b> targets, the payload delivery is even more intriguing. Often newly ordered hardware components are intercepted during mail delivery and implanted with GrayFish. This happened with the USB for Stuxnet for example.</p>
 
+<h4>Detection</h4>
+
 <p>GrayFish is also very hard to detect. Within its code it has a self-destruct sequence. If the boot sequence (which it has infected in order to propagate itself), it will delete itself and all evidence pointing to it from the computer. It was only detected by the so-called “Magnet of Threats”, which was a fake target server set-up by Kaspersky.</p>
+
+<p>There were a few occasion when standard anti-virus programs were able to detect malicious GrayFish activity but there seem to be very rare. GrayFish seems to be able to evade anti-virus programs by splitting itself into modules, forging microsoft certificates, exploiting <a href="userprivileges">user privilege</a> bugs, and very strong encription. Existing pieces of code used some MD5 encryption that some researches have been able to decrypt but SHA1 and better have been undecrypted so far.</p>
+
+<h4>Flame:</h4>
+
+<blockquote class="blockquote">
+<p>
+Flame, also known as Flamer, sKyWIper, and Skywiper, is modular computer malware discovered in 2012 that attacks computers running the Microsoft Windows operating system. The program is being used for targeted cyber espionage in Middle Eastern countries.
+</p>
+</blockquote>
+<p>~ https://en.wikipedia.org/wiki/Flame_(malware)</p>
+
+<p>Mechanism:</p>
+<ul>
+<li>Faked a Microsoft Enforced Licensing Intermediate PCA certificate authority</li>
+<li>Modules posing as Microsoft official files</li>
+<li>Installed fake audio driver to maintain run-time</li>
+<li>Infected computers were bluetooth beacons of propagation</li>
+<li>LAN & USBs infected</li>
+</ul>
+
+<p>As a result, this virus could spread very easily. It’s estimated that it has infected about 1000 PCs, mainly in Iran. This suggests that it had instructions to only install itself on certain targeted machines, as 1000 is too little if it were left free propagation with its capabilities.</p>
+
+<h3>What does this all lead to?</h3>
+
+<h4>Lessons Learned</h4>
+<p>One of the most important lessons seems to be that even air-gapped Industrial Control Systems are vulnerable to infection and exploitation. Equation Group has been able to get inside the computers of researches by infecting a USB stick simply through physical tampering.</p>
+<p>Two such examples are:</p>
+<ul>
+<li>Oracle Installation CD</li>
+<li>Scientific Conference CD</li>
+</ul>
+
+<div class="article-image" id="gap/nogap">
+  <div>
+    <div class="image-overlay">
+      <img src="/images/gap:nogap.png" alt="Gap/NoGap" ng-click="setFragment('gap/nogap')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Infection of air gapped and non air gapped targets</p>
+  </div>
+</div>
+
+<p>Both of the above examples seem to have targetted a specific individual where CDs they have been waiting for have been intercepted by the Equation Group during delivery and malware was put into them personally. These have been deliveries from trusted entities. This allows the entity to bypass airgaps.</p>
+
+<p>Another important lessons is that state sponsored groups seem to have access to confidential blue-prints of hardware. Running under the precondition that there is an exploitable feature in every system, with these blue-prints even highly unique IC systems running specialised software seem to be doable targets. It has been speculated that there are infections in major power grids all over the world. Equation group does seem to have such capabilites.</p>
