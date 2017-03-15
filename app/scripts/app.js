@@ -288,6 +288,41 @@
         }
       ]
     },
+    'user_education':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'When creating a security policy, ICS should',
+          'correct': 2,
+          'options':[
+            'Find a suitable one on the internet and apply it directly',
+            'Find a suitable one on the internet and adapt crucial parts',
+            'Specially develop a policy suitable to every aspect of their systems',
+            'Assess only aspects of security, which have been breached previously'
+          ]
+        },
+        {
+          'title': 'How many per cent of recipients of phishing mail open the malicious links and documents?',
+          'correct': 0,
+          'options':[
+            'Around 10%',
+            'Around 30%',
+            'Around 50%',
+            'Around 70%'
+          ]
+        },
+        {
+          'title': 'What is the most common attachment in phishing e-mails?',
+          'correct': 3,
+          'options':[
+            'Audio and video files',
+            'Executable files',
+            'File archives',
+            'Office .doc files'
+          ]
+        }
+      ]
+    },
     'remote_working':{
       'title' : 'Test your knowledge!',
       'questions': [
