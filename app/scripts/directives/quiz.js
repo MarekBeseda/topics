@@ -17,7 +17,7 @@ angular.module('icstopicsApp')
       link: {
         pre: function (scope, elem) {
           scope.quiz = scope.definition;
-          scope.page = 0;
+          scope.page = 1;
           scope.correct = 0;
           scope.answers = [];
           scope.answered = function(index){

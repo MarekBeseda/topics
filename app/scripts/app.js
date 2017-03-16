@@ -137,7 +137,7 @@
      url: '/quiz',
      views:{
      'article': {templateUrl: 'views/quiz.html'},
-     'header@article': {template: '<h1>Test your knowledge</h1><p></p>'}
+     'header@article': {template: '<h1>Test your knowledge</h1><p>This test covers all the topics you read about on this site.</p>'}
      },
      resolve: {
      $title: function() { return 'Quiz'; }
