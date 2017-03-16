@@ -10,12 +10,12 @@ Targeted attacks on computer industrial control systems (ICS) are the biggest th
 <p>Networking is one of the most common vector of breach. With some of the most common attacks.</p>
 <h3 id="networking-middle">Man in the Middle Attack</h3>
 <p>
-It is an attack where all the communication between two targeted devices is going through the attackers device, hence he is capable of listening to their communication and in many cases even alter the messages. The attacker usually redirects all the communication through his device using so called ARP tables. Adress Relay Protocol tables tells the device what's the closest path to a recipient of a message with certain MAC address. However, this table is by default not secure, as it is build by asking other devices without any authentication or verification, so the attacker can tell everyone he's the closest to redirect all the traffic.Once the attacker controls the traffic flow, he can attack in several different ways.
+It is an attack where all the communication between two targeted devices is going through the attackers device, hence he is capable of listening to their communication and in many cases even alter the messages. The attacker usually redirects all the communication through his device using so called ARP tables. Address Relay Protocol tables tells the device what's the closest path to a recipient of a message with certain MAC address. However, this table is by default not secure, as it is build by asking other devices without any authentication or verification, so the attacker can tell everyone he's the closest to redirect all the traffic. Once the attacker controls the traffic flow, he can attack in several different ways.
 </p>
 <div class="article-image" id="networking_maninthemiddle">
   <div>
     <div class="image-overlay">
-      <img src="images/man_in_the_middle.png" alt="ICS Structure Diagram" ng-click="setFragment('networking_maninthemiddle')"/>
+      <img src="images/man_in_the_middle.png" alt="Man in the Middle" ng-click="setFragment('networking_maninthemiddle')"/>
       <div class="bg" ng-click="setFragment('')"></div>
     </div>
   </div>
@@ -29,7 +29,7 @@ It is an attack where all the communication between two targeted devices is goin
 <div class="article-image" id="networking_data_collection">
   <div>
     <div class="image-overlay">
-      <img src="images/data_collection.png" alt="ICS Structure Diagram" ng-click="setFragment('networking_data_collection')"/>
+      <img src="images/data_collection.png" alt="Data Collection" ng-click="setFragment('networking_data_collection')"/>
       <div class="bg" ng-click="setFragment('')"></div>
     </div>
   </div>
@@ -38,7 +38,7 @@ It is an attack where all the communication between two targeted devices is goin
   </div>
 </div>
 <h4>Message Alteration</h4>
-<p>The attacker can alter the messages to cause shutdown or even destroy machines connected to the network, triger safe guards and alarms or even display malicous messages to the users.
+<p>The attacker can alter the messages to cause shutdown or even destroy machines connected to the network, trigger safe guards and alarms or even display malicious messages to the users.
 </p>
 <h4>Replay Attack</h4>
 <p>Is another form of attack where the attacker inserts new messages into the network. The messages were recorded from previous traffic hence they are recognized as authenticated and can trigger the same events as the originals.
@@ -46,7 +46,7 @@ It is an attack where all the communication between two targeted devices is goin
 <div class="article-image" id="networking_replay">
   <div>
     <div class="image-overlay">
-      <img src="images/replay_attack.jpg" alt="ICS Structure Diagram" ng-click="setFragment('networking_replay')"/>
+      <img src="images/replay_attack.jpg" alt="Replay Attack Representation" ng-click="setFragment('networking_replay')"/>
       <div class="bg" ng-click="setFragment('')"></div>
     </div>
   </div>
@@ -67,13 +67,13 @@ Properly implemented and maintained, air-gapped networks do offer security and c
 </blockquote>
 <p> ~ according to security firm Kaspersky Lab </p>
 
-<p> Although this prevention measure seems to be good solution to all the security problems, a lot of security specialists seems to beleive that truly air-gapped ICS are almost imposible to exist (with few exceptions like a nuclear power plant). Exemplary way of infecting air-gapped ICS machine is depicted below.
+<p> Although this prevention measure seems to be good solution to all the security problems, a lot of security specialists seems to believe that truly air-gapped ICS are almost impossible to exist (with few exceptions like a nuclear power plant). Exemplary way of infecting air-gapped ICS machine is depicted below.
 </p>
 
 <div class="article-image" id="networking_airgap">
   <div>
     <div class="image-overlay">
-      <img src="images/airgap_attack.jpg" alt="ICS Structure Diagram" ng-click="setFragment('networking_airgap')"/>
+      <img src="images/airgap_attack.jpg" alt="Attack Schematic Representation" ng-click="setFragment('networking_airgap')"/>
       <div class="bg" ng-click="setFragment('')"></div>
     </div>
   </div>
@@ -100,7 +100,7 @@ Encrypting the network with strong enough cypher limits abilities of the attacke
 </p>
 <h4>Authentication</h4>
 <p>
-All devices and messages should be autheticated if they are what they claim they are and limit their privilages to neccessary minimum so the attacker is recognized as an intruder and dealt with.
+All devices and messages should be authetincated if they are what they claim they are and limit their privileges to necessary minimum so the attacker is recognized as an intruder and dealt with.
 </p>
 
 <quiz quiz="quizzes.networking_quiz"></quiz>
