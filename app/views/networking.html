@@ -1,16 +1,91 @@
+<h4>Why is secure network so important?</h4>
+
+<blockquote class="blockquote">
+<p>
+Targeted attacks on computer industrial control systems (ICS) are the biggest threat to critical national infrastructure
+</p>
+</blockquote>
+<p> ~ according to security firm Kaspersky Lab </p>
+
 <p>Networking is one of the most common vector of breach. With some of the most common attacks.</p>
 <h3 id="networking-middle">Man in the Middle Attack</h3>
 <p>
-Is a an attack where all the communication between two targeted devices is going through the attackers device, hence he is capable of listening to their communication and in many cases even alter the messages. The attacker usually redirects all the communication through his device using so called ARP tables. Adress Relay Protocol tables tells the device what's the closest path to a recipient of a message with certain MAC address. However, this table is by default not secure, as it is build by asking other devices without any authentication or verification, so the attacker can tell everyone he's the closest to redirect all the traffic.Once the attacker controls the traffic flow, he can attack in several different ways.
+It is an attack where all the communication between two targeted devices is going through the attackers device, hence he is capable of listening to their communication and in many cases even alter the messages. The attacker usually redirects all the communication through his device using so called ARP tables. Adress Relay Protocol tables tells the device what's the closest path to a recipient of a message with certain MAC address. However, this table is by default not secure, as it is build by asking other devices without any authentication or verification, so the attacker can tell everyone he's the closest to redirect all the traffic.Once the attacker controls the traffic flow, he can attack in several different ways.
 </p>
+<div class="article-image" id="networking_maninthemiddle">
+  <div>
+    <div class="image-overlay">
+      <img src="images/man_in_the_middle.png" alt="ICS Structure Diagram" ng-click="setFragment('networking_maninthemiddle')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Man-in-the-middle attack schematic representation, source: http://web.cs.ucla.edu/classes/winter13/cs111/scribe/17b/mitm.png</p>
+  </div>
+</div>
 <h4 id="networking-data">Data Collection</h4>
-The most basic attack is data collection, which does not involve any changes to the data going through, hence is especially hard to discover if the attacker uses different network to relay the data captured.
+<p>The most basic attack is data collection, which does not involve any changes to the data going through, hence is especially hard to discover if the attacker uses different network to relay the data captured.
+</p>
+<div class="article-image" id="networking_data_collection">
+  <div>
+    <div class="image-overlay">
+      <img src="images/data_collection.png" alt="ICS Structure Diagram" ng-click="setFragment('networking_data_collection')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Data collection schematic representation, source: http://www.allsyllabus.com/aj/note/Computer_Science/Computer%20Networks%20-%20II/Unit5/What%20is%20Network%20Security1.PNG</p>
+  </div>
+</div>
 <h4>Message Alteration</h4>
-The attacker can alter the messages to cause shutdown or even destroy machines connected to the network, triger safe guards and alarms or even display malicous messages to the users.
+<p>The attacker can alter the messages to cause shutdown or even destroy machines connected to the network, triger safe guards and alarms or even display malicous messages to the users.
+</p>
 <h4>Replay Attack</h4>
-Is another form of attack where the attacker inserts new messages into the network. The messages were recorded from previous traffic hence they are recognized as authenticated and can trigger the same events as the originals.
+<p>Is another form of attack where the attacker inserts new messages into the network. The messages were recorded from previous traffic hence they are recognized as authenticated and can trigger the same events as the originals.
+</p>
+<div class="article-image" id="networking_replay">
+  <div>
+    <div class="image-overlay">
+      <img src="images/replay_attack.jpg" alt="ICS Structure Diagram" ng-click="setFragment('networking_replay')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Replay attack schematic representation, source: https://2.bp.blogspot.com/-QCIDnbb6EKM/VubXSJ1oqtI/AAAAAAAAAiA/iEEJdTRwclECl1wtx5wXF9bjV_YA7w50A/s1600/ReplayAttack.jpg</p>
+  </div>
+</div>
 <h3 id="networking-prevention">Prevention</h3>
-There are two ways of becoming the man in the middle. First one is infecting the ARP tables and another one is malicious device in the network. Both require either physical or network access to the network. Physical access should be restricted and falls under different kind of security therefore not discussed here. For ARP table alteration there are several ways to stop the attacker.
+
+<h3>Air Gap</h3>
+
+<p> An air gap is a network security measure used to ensure a computer network is physically isolated in order to prevent it from establishing an external connection, specifically to the Internet. The concept is that a physical gap can prevent unauthorized access, stopping hackers and malware.</p>
+
+<blockquote class="blockquote">
+<p>
+Properly implemented and maintained, air-gapped networks do offer security and can be found among some of the most secure global institutions, such as government intelligence agencies, financial institutions and others.
+</p>
+</blockquote>
+<p> ~ according to security firm Kaspersky Lab </p>
+
+<p> Although this prevention measure seems to be good solution to all the security problems, a lot of security specialists seems to beleive that truly air-gapped ICS are almost imposible to exist (with few exceptions like a nuclear power plant). Exemplary way of infecting air-gapped ICS machine is depicted below.
+</p>
+
+<div class="article-image" id="networking_airgap">
+  <div>
+    <div class="image-overlay">
+      <img src="images/airgap_attack.jpg" alt="ICS Structure Diagram" ng-click="setFragment('networking_airgap')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Attack on air-gapped system schematic representation, source: http://www.welivesecurity.com/wp-content/uploads/2014/11/Figure_1_infographic.jpg</p>
+  </div>
+</div>
+
+<p>Considering the various pathways that can act as a conduit for intrusion and malicious intent—such as removable devices, laptops, diagnostic equipment an air-gapped network can leave one with a false sense of security. Therefore administrators of ICSs should focus as well of other preventions measures </p>
+
+<p>There are two ways of becoming the man in the middle. First one is infecting the ARP tables and another one is malicious device in the network. Both require either physical or network access to the network. Physical access should be restricted and falls under different kind of security therefore not discussed here. For ARP table alteration there are several ways to stop the attacker.
+</p>
 <h4>MAC Address Filtering</h4>
 <p>
 The network limits the devices that can connect to a list of valid MAC addresses. This can make it harder for attacker to connect to the network, but he can spoof the network for any device connected and then change it's MAC address to the allowed one.
@@ -24,6 +99,14 @@ The devices connected to the network don't usually change, therefore the ARP tab
 Encrypting the network with strong enough cypher limits abilities of the attacker, but he can still collect data and hope to decrypt them later or obtain the key in another way. If the attacker manages to capture the initial communication he could be able to replace the used encryption keys with his own.
 </p>
 <h4>Authentication</h4>
-<p>  
+<p>
 All devices and messages should be autheticated if they are what they claim they are and limit their privilages to neccessary minimum so the attacker is recognized as an intruder and dealt with.
 </p>
+
+<h5>References:</h5>
+<ul>
+<li>National Cyber Security Centre, (2016). 10 Steps: Network security. Accessed February 2017, Available at:<br><a href="https://www.gov.uk/government/publications/10-steps-to-cyber-security-advice-sheets/10-steps-network-security--11">https://www.gov.uk/government/publications/10-steps-to-cyber-security-advice-sheets/10-steps-network-security--11</a></li>
+<li>Automationworld, (2017). Spanning the Air Gap: ICS Network Security. Accessed February 2017, Available at:<br><a href="https://www.automationworld.com/spanning-air-gap-ics-network-security">https://www.automationworld.com/spanning-air-gap-ics-network-security</a></li>
+<li>NIST, (2015). Guide to Industrial Control Systems (ICS) Security. Accessed February 2017, Available at:<br><a href="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r2.pdf">http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r2.pdf</a></li>
+
+</ul>
