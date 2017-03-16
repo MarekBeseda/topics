@@ -133,11 +133,20 @@
    resolve: {
    $title: function() { return 'Equation Case Study'; }
    }
-  });
+ }).state('article.quiz', {
+     url: '/quiz',
+     views:{
+     'article': {templateUrl: 'views/quiz.html'},
+     'header@article': {template: '<h1>Test your knowledge</h1><p></p>'}
+     },
+     resolve: {
+     $title: function() { return 'Quiz'; }
+     }
+    });
   $locationProvider.html5Mode({
     enabled: true,
     requireBase: true
-  }); 
+  });
 })
 .run(['$anchorScroll', function($anchorScroll) {
   $anchorScroll.yOffset = 50;
@@ -439,6 +448,30 @@
             'Through physical media access to the inner isolated network',
             'Through malicious insiders',
             'Digitally through an incorrectly air gapped network'
+          ]
+        }
+      ]
+    },
+    'networking_quiz':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What does an air gapped ICS network mean?',
+          'correct': 1,
+          'options':[
+            'Physical parts not being connected to any network',
+            'The ICS not being connected to any outside network but has physical systems connected to it',
+            'There’s a physical wall protecting all critical server infrastructure from hands-on tampering',
+            'There’s no digital connection whatsoever within the system'
+          ]
+        },
+        {
+          'title': 'How can you limit the chances of becoming the vicitim of man-in-the-middle attack?',
+          'correct': 2,
+          'options':[
+            'Send letters with your commands',
+            'Migrate your communication system to carrier pigeons',
+            'Encrypt and authenticate your communication',
           ]
         }
       ]
