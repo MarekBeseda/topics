@@ -9,7 +9,7 @@
 angular.module('icstopicsApp')
   .directive('quiz', function () {
     return {
-      templateUrl: 'scripts/directives/quizView.html',
+      templateUrl: 'views/quizView.html',
       restrict: 'E',
       scope: {
         definition: '=quiz'
