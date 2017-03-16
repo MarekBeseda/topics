@@ -204,8 +204,6 @@ html,body {
   transition: height .5s ease; 
   margin-bottom: 20px;
   .page{
-    overflow: hidden;;
-    height: 100%;
     opacity: 1;
     &.ng-hide-remove {
       transition: opacity 0.5s;
@@ -238,6 +236,8 @@ html,body {
 
   .progress{
     border-radius: 2px 2px 0 0;
+    height: 10px;
+    position: absolute;
     width: 100%;
     .progress-bar{
       transition: width 0.5s;

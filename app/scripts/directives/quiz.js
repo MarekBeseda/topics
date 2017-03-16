@@ -14,8 +14,8 @@ angular.module('icstopicsApp')
       scope: {
         definition: '=quiz'
       },
-      link: function postLink(scope) {
-        scope.page = 0;
+      link: function postLink(scope, elem) {
+        scope.page = 1;
         scope.correct = 0;
         scope.answers = [];
         scope.answered = function(index){
@@ -29,27 +29,14 @@ angular.module('icstopicsApp')
           scope.page++;
         };
         scope.quizStyle = function(){
-          var sum = 0;
-          if(scope.page === 0){
-            return {height: 200};
-          } else if (scope.page === scope.definition.questions.length + 1){
-            sum = 0;
-            angular.forEach(scope.definition.questions, function(q) {
-              angular.forEach(q.options, function(o){
-                sum += o.length / 50 * 30 + 40;
-              });
-            });
-            return {height: 250 + sum};
-          } else {
-            sum = Math.ceil(scope.definition.questions[scope.page - 1].title.length / 45) * 35;
-            if(scope.page !== 1){
-              sum += 50;
-            }
-            angular.forEach(scope.definition.questions[scope.page - 1].options, function(o){
-              sum += Math.ceil(o.length / 80) * 30 + 20;
-            });
-            return {height: 100 + sum};
-          }
+          var page = $(elem).find('.page:eq(' + scope.page +')');
+          page.css('cssText', 'position:absolute !important; visibility:hidden !important; display:block !important; opacity:1 !important');
+          var h = page.height();
+          console.log(page.height());
+          console.log(page.width());
+          console.log(" ");
+          page.removeAttr('style');
+          return {height: h + 10}
         };
       }
     };
