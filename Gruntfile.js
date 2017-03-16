@@ -20,6 +20,7 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-ng-annotate');
 
   // Configurable paths for the application
   var appConfig = {

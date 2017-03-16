@@ -134,7 +134,10 @@
    $title: function() { return 'Equation Case Study'; }
    }
   });
- $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: true
+  }); 
 })
 .run(['$anchorScroll', function($anchorScroll) {
   $anchorScroll.yOffset = 50;
