@@ -55,7 +55,7 @@
   }).state('article.malware', {
     url: '/malware',
     views:{
-      'article': {templateUrl: 'views/malwareprotection.html'},
+      'article': {templateUrl: 'views/malware.html'},
       'header@article': {template: '<h1>Malware Protection!</h1><p>Unless the government wants you</p>'}
     },
     resolve: {
@@ -192,20 +192,20 @@
           'title': 'The internet connection for ICS should be',
           'correct': 1,
           'options':[
-            'as fast as possible',
-            'limited as much as possible',
-            'set up using the newest technologies',
-            'not secured at all'
+            'As fast as possible',
+            'Limited as much as possible',
+            'Set up using the newest technologies',
+            'Not secured at all'
           ]
         },
         {
           'title': 'Users privileges should',
           'correct': 2,
           'options':[
-            'be the same for all users',
-            'be very limited for all users',
-            'be tailored to the user role following "least privilage" principle',
-            'block the internet connection and email access for all users'
+            'Be the same for all users',
+            'Be very limited for all users',
+            'Be tailored to the user role following "least privilage" principle',
+            'Block the internet connection and email access for all users'
           ]
         },
         {
@@ -227,7 +227,7 @@
           'title': 'What is the "least privilage" principle?',
           'correct': 1,
           'options':[
-            'all users are provided with strictly limited privileges',
+            'All users are provided with strictly limited privileges',
             'users are only provided with the privileges that they need to do their job',
             'users do not have any privileges',
           ]
@@ -236,10 +236,10 @@
           'title': 'Users privileges should',
           'correct': 2,
           'options':[
-            'be the same for all users',
-            'be very limited for all users',
-            'be tailored to the user role following "least privilage" principle',
-            'block the internet connection and email access for all users'
+            'Be the same for all users',
+            'Be very limited for all users',
+            'Be tailored to the user role following "least privilage" principle',
+            'Block the internet connection and email access for all users'
           ]
         },
         {
@@ -249,6 +249,76 @@
             'Decide what privileges user needs and limit the number of privileged users',
             'Review user accounts, decide what privileges user needs and increase the number of privileged users',
             'Monitor users, introduce standards for user access control and grant admin privileges to all users'
+          ]
+        }
+      ]
+    },
+    'removable_media':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'When a removable storage device reached the end of its life cycle, the correct procedure is to',
+          'correct': 2,
+          'options':[
+            'Dispose of it without any special procedures',
+            'Delete all files on it and dispose of it afterwards',
+            'Do a multi-pass wipe or have it wiped by a certified service',
+            'Erase it and give it to an employee'
+          ]
+        },
+        {
+          'title': 'How many per cent of confirmed data breaches are accounted for by lost removable storage and personal devices?',
+          'correct': 1,
+          'options':[
+            '30%',
+            '40%',
+            '50%',
+            '60%'
+          ]
+        },
+        {
+          'title': 'What level of removable media freedom of use is acceptable for ICS?',
+          'correct': 2,
+          'options':[
+            'Every user can use their personal removable media',
+            'Users are not allowed to use any kind of removable device',
+            'Users are only allowed to use devices issued to them',
+            'Users are allowed to use issued media for personal and professional use'
+          ]
+        }
+      ]
+    },
+    'user_education':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'When creating a security policy, ICS should',
+          'correct': 2,
+          'options':[
+            'Find a suitable one on the internet and apply it directly',
+            'Find a suitable one on the internet and adapt crucial parts',
+            'Specially develop a policy suitable to every aspect of their systems',
+            'Assess only aspects of security, which have been breached previously'
+          ]
+        },
+        {
+          'title': 'How many per cent of recipients of phishing mail open the malicious links and documents?',
+          'correct': 0,
+          'options':[
+            'Around 10%',
+            'Around 30%',
+            'Around 50%',
+            'Around 70%'
+          ]
+        },
+        {
+          'title': 'What is the most common attachment in phishing e-mails?',
+          'correct': 3,
+          'options':[
+            'Audio and video files',
+            'Executable files',
+            'File archives',
+            'Office .doc files'
           ]
         }
       ]
@@ -282,6 +352,90 @@
             'Theft of the device or man-in-the-middle attack',
             'User can procrastinate instead of working',
             'Worse efficiency of the workers'
+          ]
+        }
+      ]
+    },
+    'risk_quiz':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What percentage of all cyber attacks originates from inadequate security technology?',
+          'correct': 1,
+          'options':[
+            '15%',
+            '30%',
+            '55%',
+            '70%'
+          ]
+        },
+        {
+          'title': 'How should one approach the early part of a cyber incidence investigation?',
+          'correct': 1,
+          'options':[
+            'Figure out what the malicious files do at all cost',
+            'Classify the impact of the incidence, its priority, and assign personnel',
+            'Investigate every security incident the same have anyone available handle it',
+            'Look at the malicious files, delete them ASAP to prevent further incidents'
+          ]
+        },
+        {
+          'title': 'What is an often neglected and important part of incident mitigation?',
+          'correct': 3,
+          'options':[
+            'Air gapping important systems to prevent entrance',
+            'Malware prevention as well as network protection capabilities for prevention',
+            'User education and their integrity',
+            'Quality assurance, accountability, and availability of an assigned mitigation force'
+          ]
+        }
+      ]
+    },
+    'malware_quiz':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What is the difference between viruses and trojans?',
+          'correct': 1,
+          'options':[
+            'Viruses deliver the payload whereas trojans are the actual weapons',
+            'Trojans deliver the payload whereas viruses are the actual weapons',
+            'They are really the same thing, both deliver themselves and take hold of valuables'
+          ]
+        },
+        {
+          'title': 'How many samples of malware are discovered every quarter?',
+          'correct': 3,
+          'options':[
+            '500,000',
+            '25,000,000',
+            '300,000,000',
+            '600,000,000'
+          ]
+        }
+      ]
+    },
+    'monitoring_quiz':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What does an air gapped ICS network mean?',
+          'correct': 1,
+          'options':[
+            'Physical parts not being connected to any network',
+            'The ICS not being connected to any outside network but has physical systems connected to it',
+            'There’s a physical wall protecting all critical server infrastructure from hands-on tampering',
+            'There’s no digital connection whatsoever within the system'
+          ]
+        },
+        {
+          'title': 'What is not an entrance point of malware in air gapped Industrial Control Systems?',
+          'correct': 0,
+          'options':[
+            'Through outer network and through it digitally to the physical systems',
+            'Through physical media access to the inner isolated network',
+            'Through malicious insiders',
+            'Digitally through an incorrectly air gapped network'
           ]
         }
       ]
