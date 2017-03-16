@@ -38,7 +38,7 @@
     url: '/networking',
     views:{
       'article': {templateUrl: 'views/networking.html'},
-      'header@article': {template: '<h1>Networking!</h1><p>How to make friends and influence people</p>'}
+      'header@article': {template: '<h1>Networking</h1><p>How to make friends and influence people</p>'}
     },
     resolve: {
       $title: function() { return 'Networking Security'; }
@@ -133,7 +133,7 @@
    resolve: {
    $title: function() { return 'Equation Case Study'; }
    }
-  });
+ });
  $locationProvider.html5Mode(true);
 })
 .run(['$anchorScroll', function($anchorScroll) {
