@@ -151,7 +151,7 @@
 .run(['$anchorScroll', function($anchorScroll) {
   $anchorScroll.yOffset = 50;
 }])
-.run(function ($rootScope, $state, $stateParams) {
+.run(function ($rootScope, $state, $stateParams,smoothScroll) {
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
   $rootScope.setFragment = function (fragment){
@@ -163,13 +163,22 @@
       window.location.replace(window.location.pathname + '#close');
     }
   };
-  /*$rootScope.$on('$stateChangeStart',
+  $rootScope.$on('$stateChangeSuccess',
   function(){
-    if($state.includes('article')) {
-      $location.hash('');
-      anchorSmoothScroll.scrollTo('article-header');
+    var options = {
+      duration: 700,
+      easing: 'easeInQuad',
+      offset: 500,
+      callbackBefore: function(element) {
+          console.log('about to scroll to element', $('#article-header'));
+      },
+      callbackAfter: function(element) {
+          console.log('scrolled to element', $('#article-header'));
+      },
+      containerId: 'custom-container-id'
     }
-  });*/
+    smoothScroll(document.getElementById('article-header'), options);
+  });
 }).run(function($rootScope){
   $rootScope.quizzes = {
     'secure_config':{
