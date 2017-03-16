@@ -3,7 +3,7 @@
 Many ICS has 99.99% up-time guarantees and generally cannot afford any down-time whatsoever. Risk prevention is therefore crucial and if a problem arises, incidence response must be quick.
 </p>
 
-<img src="images/hacking_stat1.png" alt="Hacking stat1" height = 30% width = 50%/>
+<img src="/images/hacking_stat1.png" alt="Hacking stat1" height = 30% width = 50%/>
 <h3 id="risk-mitigation"><br>Risk Mitigation (The Before):</h3>
 
 <p>The best defence is prevention. Unfortunately, it is also the least recognised and publicly awar ematpeart. However, if a system administrator can set-up a correct risk management regime, the rewards can be incredible.</p>
@@ -39,7 +39,7 @@ Many ICS has 99.99% up-time guarantees and generally cannot afford any down-time
   <li>access rights link</li>
 </ul>
 
-<img src="images/hacking_stat2.png" alt="Hacking stat2" height = 30% width = 50%/>
+<img src="/images/hacking_stat2.png" alt="Hacking stat2" height = 30% width = 50%/>
 
 <p>
 The main difference between different types of cyber security incident appears to lie in the source of the incident (eg a minor criminal compared to a major organised crime syndicate), rather than the type of incident (eg hacking, malware or social engineering).
@@ -49,7 +49,17 @@ The main difference between different types of cyber security incident appears t
 It can however still be the case that an attack on an ICS is successful. In that case, it is important to engage the Cyber Incident Response Plan.
 </p>
 
-<img src="images/incident_risks.png" alt="Main Risks" height = 10% width = 70%/>
+<div class="article-image" id="risk_main">
+  <div>
+    <div  class="image-overlay">
+      <img src="images/incident_risks.png" alt="Main Risks" ng-click="setFragment('risk_main')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Main Risks</p>
+  </div>
+</div>
 
 <h3 id="risk-response"><br>Incidence Response:</h3>
 
@@ -71,7 +81,18 @@ An investigation into the attack should then follow. A blameless culture is cruc
   <li>Assigning incidents to appropriate personnel in terms of their legitimacy, correctness, constituency origin, severity or impact.</li>
 </ul>
 
-<img src="images/incident_assessment.png" alt="Risk Assesment" height = 10% width = 70%/>
+
+<div class="article-image" id="risk_assessment">
+  <div>
+    <div  class="image-overlay">
+      <img src="images/incident_assessment.png" alt="Risk Assesment" ng-click="setFragment('risk_assessment')"/>
+      <div class="bg" ng-click="setFragment('')"></div>
+    </div>
+  </div>
+  <div class="description">
+    <p>Risks Assessment</p>
+  </div>
+</div>
 
 <p>
 <br>Why should one hire experts to investigate?
@@ -88,10 +109,11 @@ situational awareness, particularly in the area of cyber intelligence</li>
 
 <quiz quiz="quizzes.risk_quiz"></quiz>
 
-
-<p>
-https://www.tripwire.com/state-of-security/ics-security/3-ics-security-incidents-rocked-2016-learn/
-https://www.tripwire.com/state-of-security/ics-security/approach-cyber-security-industrial-control-systems/
-https://www.bcgperspectives.com/content/articles/technology-digital-building-a-cyberresilient-organization/?utm_source=201702TA&utm_medium=Email&utm_campaign=bdl
-https://www.crest-approved.org/wp-content/uploads/2014/11/CSIR-Procurement-Guide.pdf
-</p>
+<h5>References:</h5>
+<ul>
+  <li>Bisson D, (2016). 3 ICS Security Incidents that Rocked 2016 and What We Should Learn from Them, Accessed March 2017, Available at:<br><a href="https://www.tripwire.com/state-of-security/ics-security/3-ics-security-incidents-rocked-2016-learn/">https://www.tripwire.com/state-of-security/ics-security/3-ics-security-incidents-rocked-2016-learn/</a></li>
+  <li>Bisson D, (2016). How to Approach Cyber Security for Industrial Control Systems, Accessed March 2017, Available at:<br><a href="https://www.tripwire.com/state-of-security/ics-security/approach-cyber-security-industrial-control-systems/">https://www.tripwire.com/state-of-security/ics-security/approach-cyber-security-industrial-control-systems/</a></li>
+  <li>Deutscher S, (2017). Building a Cyberresilient Organization, Accessed March 2017, Available at:<br><a href="https://www.bcgperspectives.com/content/articles/technology-digital-building-a-cyberresilient-organization/?utm_source=201702TA&utm_medium=Email&utm_campaign=bdl">https://www.bcgperspectives.com/content/articles/technology-digital-building-a-cyberresilient-organization/?utm_source=201702TA&utm_medium=Email&utm_campaign=bdl</a></li>
+  <li>CREST, (2013). Cyber Security Incident Response Guide, Accessed March 2017, Available at:<br><a href="https://www.crest-approved.org/wp-content/uploads/2014/11/CSIR-Procurement-Guide.pdf">https://www.crest-approved.org/wp-content/uploads/2014/11/CSIR-Procurement-Guide.pdf</a></li>
+  <li>NIST, (2015). Guide to Industrial Control Systems (ICS) Security, Accessed March 2017, Available at:<br><a href="http://csrc.nist.gov/publications/drafts/800-82r2/sp800_82_r2_second_draft.pdf">http://csrc.nist.gov/publications/drafts/800-82r2/sp800_82_r2_second_draft.pdf </a></li>
+</ul>
