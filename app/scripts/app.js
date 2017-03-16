@@ -163,31 +163,6 @@
   });*/
 }).run(function($rootScope){
   $rootScope.quizzes = {
-    'test':{
-      'title' : 'lets test this thing',
-      'questions': [
-        {
-          'title': 'press C',
-          'correct': 2,
-          'options':[
-            'A',
-            'B',
-            'C',
-            'D'
-          ]
-        },
-        {
-          'title': 'press C',
-          'correct': 2,
-          'options':[
-            'A',
-            'B',
-            'C',
-            'D'
-          ]
-        }
-      ]
-    },
     'secure_config':{
       'title' : 'Test your knowledge!',
       'questions': [
@@ -444,4 +419,9 @@
       ]
     }
   };
+  var all = {questions: [], title:'All them quizzes'};
+  angular.forEach($rootScope.quizzes, function(quiz){
+    all.questions = all.questions.concat(quiz.questions);
+  });
+  $rootScope.quizzes.all = all;
 });
