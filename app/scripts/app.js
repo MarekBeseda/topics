@@ -115,6 +115,15 @@
    resolve: {
      $title: function() { return 'Remote Working'; }
    }
+  }).state('article.malware', {
+   url: '/malwareProtection',
+   views:{
+     'article': {templateUrl: 'views/malware.html'},
+     'header@article': {template: '<h1>Malware Protection</h1><p>Is there bonoware anyway?</p>'}
+   },
+   resolve: {
+     $title: function() { return 'Malware Protection'; }
+   } 
   }).state('article.ukraineCaseStudy', {
    url: '/ukraineCaseStudy',
    views:{
