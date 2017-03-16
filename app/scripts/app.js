@@ -466,7 +466,7 @@
           ]
         },
         {
-          'title': 'How can you limit the chances of becoming the vicitim of man-in-the-middle attack?',
+          'title': 'How can you limit the chances of becoming the victim of man-in-the-middle attack?',
           'correct': 2,
           'options':[
             'Send letters with your commands',
