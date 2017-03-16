@@ -391,6 +391,30 @@
         }
       ]
     },
+    'malware_quiz':{
+      'title' : 'Test your knowledge!',
+      'questions': [
+        {
+          'title': 'What is the difference between viruses and trojans?',
+          'correct': 1,
+          'options':[
+            'Viruses deliver the payload whereas trojans are the actual weapons',
+            'Trojans deliver the payload whereas viruses are the actual weapons',
+            'They are really the same thing, both deliver themselves and take hold of valuables'
+          ]
+        },
+        {
+          'title': 'How many samples of malware are discovered every quarter?',
+          'correct': 3,
+          'options':[
+            '500,000',
+            '25,000,000',
+            '300,000,000',
+            '600,000,000'
+          ]
+        }
+      ]
+    },
     'monitoring_quiz':{
       'title' : 'Test your knowledge!',
       'questions': [
