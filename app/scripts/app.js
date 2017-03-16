@@ -55,7 +55,7 @@
   }).state('article.malware', {
     url: '/malware',
     views:{
-      'article': {templateUrl: 'views/malwareprotection.html'},
+      'article': {templateUrl: 'views/malware.html'},
       'header@article': {template: '<h1>Malware Protection!</h1><p>Unless the government wants you</p>'}
     },
     resolve: {
@@ -115,15 +115,6 @@
    resolve: {
      $title: function() { return 'Remote Working'; }
    }
-  }).state('article.malware', {
-   url: '/malwareProtection',
-   views:{
-     'article': {templateUrl: 'views/malware.html'},
-     'header@article': {template: '<h1>Malware Protection</h1><p>Is there bonoware anyway?</p>'}
-   },
-   resolve: {
-     $title: function() { return 'Malware Protection'; }
-   } 
   }).state('article.ukraineCaseStudy', {
    url: '/ukraineCaseStudy',
    views:{
