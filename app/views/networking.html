@@ -1,15 +1,15 @@
 <p>Networking is one of the most common vector of breach. With some of the most common attacks.</p>
-<h3>Man in the Middle</h3>
+<h3 id="networking-middle">Man in the Middle</h3>
 <p>
 Is a an attack where all the communication between two targeted devices is going through the attackers device, hence he is capable of listening to their communication and in many cases even alter the messages. The attacker usually redirects all the communication through his device using so called ARP tables. Adress Relay Protocol tables tells the device what's the closest path to a recipient of a message with certain MAC address. However, this table is by default not secure, as it is build by asking other devices without any authentication or verification, so the attacker can tell everyone he's the closest to redirect all the traffic.Once the attacker controls the traffic flow, he can attack in several different ways.
 </p>
-<h4>Data Collection</h4>
+<h4 id="networking-data">Data Collection</h4>
 The most basic attack is data collection, which does not involve any changes to the data going through, hence is especially hard to discover if the attacker uses different network to relay the data captured.
 <h4>Message Alteration</h4>
 The attacker can alter the messages to cause shutdown or even destroy machines connected to the network, triger safe guards and alarms or even display malicous messages to the users.
 <h4>Replay Attack</h4>
 Is another form of attack where the attacker inserts new messages into the network. The messages were recorded from previous traffic hence they are recognized as authenticated and can trigger the same events as the originals.
-<h3>Prevention</h3>
+<h3 id="networking-prevention">Prevention</h3>
 There are two ways of becoming the man in the middle. First one is infecting the ARP tables and another one is malicious device in the network. Both require either physical or network access to the network. Physical access should be restricted and falls under different kind of security therefore not discussed here. For ARP table alteration there are several ways to stop the attacker.
 <h4>MAC Address Filtering</h4>
 The network limits the devices that can connect to a list of valid MAC addresses. This can make it harder for attacker to connect to the network, but he can spoof the network for any device connected and then change it's MAC address to the allowed one.
@@ -17,5 +17,5 @@ The network limits the devices that can connect to a list of valid MAC addresses
 The devices connected to the network don't usually change, therefore the ARP tables can be locked so they don't change under attackers command. However, this kind of prevention is not ideal for all networks as the network unusable from new devices and can slow down the communication in case the shortest path changes.
 <h4>Encryption</h4>
 Encrypting the network with strong enough cypher limits abilities of the attacker, but he can still collect data and hope to decrypt them later or obtain the key in another way. If the attacker manages to capture the initial communication he could be able to replace the used encryption keys with his own.
-<h4>Authentication</h4> 
+<h4>Authentication</h4>
 All devices and messages should be autheticated if they are what they claim they are and limit their privilages to neccessary minimum so the attacker is recognized as an intruder and dealt with.
